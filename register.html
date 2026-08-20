@@ -1,0 +1,231 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sports Equipment | Register </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Main favicon -->
+    <link rel="icon" href="favicon.ico" />
+    <!-- webp favicons -->
+    <link rel="icon" type="image/webp" sizes="16x16" href="assets/images/favicon-16x16.png" />
+    <link rel="icon" type="image/webp" sizes="32x32" href="assets/images/favicon-32x32.png" />
+    <!-- Apple -->
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
+    <!-- Android -->
+    <link rel="icon" type="image/webp" sizes="192x192" href="assets/images/android-chrome-192x192.png" />
+    <link rel="icon" type="image/webp" sizes="512x512" href="assets/images/android-chrome-512x512.png" />
+    <!-- Manifest -->
+    <link rel="manifest" href="assets/images/site.webmanifest" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!--- Bootstrap Icon --->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="assets/css/global.css" />
+    <link rel="stylesheet" href="assets/css/auth.css" />
+</head>
+
+<body>
+
+    <!--- Register Page --->
+    <section class="sp-reg-page">
+        <div class="container">
+            <div class="sp-reg-wrapper">
+                <!--- Register Brand --->
+                <div class="sp-reg-brand">
+                    <a href="index.html" class="sp-reg-logo">
+                        <span class="sp-reg-logo-mark">
+                            <i class="bi bi-trophy-fill"></i>
+                        </span>
+                        <span class="sp-reg-logo-text">SPORT<span>RENT</span></span>
+                    </a>
+                    <div class="sp-reg-brand-content">
+                        <span class="sp-reg-label">
+                            <i class="bi bi-person-plus-fill"></i>
+                            JOIN THE GAME
+                        </span>
+                        <h1>Your Gear.<br><span>Your Game.</span></h1>
+                        <p>Create your SportRent account and get easy access to premium sports equipment whenever you
+                            are ready to play.</p>
+                   
+                    <div class="sp-reg-brand-points">
+                        <div class="sp-reg-brand-point">
+                            <i class="bi bi-check2-circle"></i>
+                            <span>Access premium sports equipment</span>
+                        </div>
+                        <div class="sp-reg-brand-point">
+                            <i class="bi bi-check2-circle"></i>
+                            <span>Manage all your rentals in one place</span>
+                        </div>
+                        <div class="sp-reg-brand-point">
+                            <i class="bi bi-check2-circle"></i>
+                            <span>Play more without buying more</span>
+                        </div>
+                    </div>
+                     </div>
+
+                    <div class="sp-log-brand-stats">
+                        <div class="sp-log-brand-stat">
+                            <strong>500+</strong>
+                            <span>Equipment</span>
+                        </div>
+                        <div class="sp-log-brand-stat">
+                            <strong>20+</strong>
+                            <span>Sports</span>
+                        </div>
+                        <div class="sp-log-brand-stat">
+                            <strong>24/7</strong>
+                            <span>Support</span>
+                        </div>
+                    </div>
+                    <div class="sp-reg-brand-shape sp-reg-brand-shape-one"></div>
+                    <div class="sp-reg-brand-shape sp-reg-brand-shape-two"></div>
+                </div>
+                <!--- Register Form Panel --->
+                <div class="sp-reg-form-panel">
+                    <div class="sp-reg-form-container">
+                        <!--- Form Heading --->
+                        <div class="sp-reg-form-heading">
+                            <div class="sp-reg-mobile-logo-wrapper">
+                                <a href="index.html" class="sp-reg-mobile-logo">
+                                    <span class="sp-reg-logo-mark">
+                                        <i class="bi bi-trophy-fill"></i>
+                                    </span>
+                                    <span class="sp-reg-logo-text">SPORT<span>RENT</span></span>
+                                </a>
+                            </div>
+                            <span class="sp-reg-form-kicker">CREATE ACCOUNT</span>
+                            <h2>Join SportRent.</h2>
+                            <p>Create your account and start renting the gear you need.</p>
+                        </div>
+                        <!--- Register Form --->
+                        <form class="sp-reg-form" id="spRegForm">
+                            <!--- Account Type --->
+                            <div class="sp-reg-field">
+                                <label>REGISTER AS</label>
+                                <div class="sp-reg-role-selector">
+                                    <label class="sp-reg-role-option">
+                                        <input type="radio" name="accountType" value="client" checked required>
+                                        <span class="sp-reg-role-card">
+                                            <span class="sp-reg-role-icon">
+                                                <i class="bi bi-person"></i>
+                                            </span>
+                                            <span>
+                                                <strong>Client</strong>
+                                                <small>Rent sports equipment</small>
+                                            </span>
+                                        </span>
+                                    </label>
+                                    <label class="sp-reg-role-option">
+                                        <input type="radio" name="accountType" value="admin" required>
+                                        <span class="sp-reg-role-card">
+                                            <span class="sp-reg-role-icon">
+                                                <i class="bi bi-shield-check"></i>
+                                            </span>
+                                            <span>
+                                                <strong>Admin</strong>
+                                                <small>Manage the platform</small>
+                                            </span>
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                            <!--- Full Name Field --->
+                            <div class="sp-reg-field">
+                                <label for="spRegName">FULL NAME</label>
+                                <div class="sp-reg-input-wrapper">
+                                    <i class="bi bi-person sp-reg-input-icon"></i>
+                                    <input type="text" id="spRegName" class="sp-reg-input"
+                                        placeholder="Enter your full name" pattern="[A-Za-z ]+"
+                                        title="Please enter letters only." required autocomplete="name">
+                                </div>
+                            </div>
+                            <!--- Phone Field --->
+                            <div class="sp-reg-field">
+                                <label for="spRegPhone">PHONE NUMBER</label>
+                                <div class="sp-reg-input-wrapper">
+                                    <i class="bi bi-telephone sp-reg-input-icon"></i>
+                                    <input type="tel" id="spRegPhone" class="sp-reg-input"
+                                        placeholder="Enter your 10 digit phone number" pattern="[0-9]{10}"
+                                        minlength="10" maxlength="10" inputmode="numeric"
+                                        title="Please enter exactly 10 numbers." required autocomplete="tel">
+                                </div>
+                            </div>
+                            <!--- Email Field --->
+                            <div class="sp-reg-field">
+                                <label for="spRegEmail">EMAIL ADDRESS</label>
+                                <div class="sp-reg-input-wrapper">
+                                    <i class="bi bi-envelope sp-reg-input-icon"></i>
+                                    <input type="email" id="spRegEmail" class="sp-reg-input"
+                                        placeholder="Enter your email address" required autocomplete="email">
+                                </div>
+                            </div>
+                            <!--- Password Field --->
+                            <div class="sp-reg-field">
+                                <label for="spRegPassword">PASSWORD</label>
+                                <div class="sp-reg-input-wrapper">
+                                    <i class="bi bi-lock sp-reg-input-icon"></i>
+                                    <input type="password" id="spRegPassword" class="sp-reg-input sp-reg-password-input"
+                                        placeholder="Create a strong password"
+                                        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^A-Za-z0-9]).{8,}"
+                                        title="Password must contain at least 8 characters, one uppercase letter, one lowercase letter, one number and one special character."
+                                        required autocomplete="new-password">
+                                    <button type="button" class="sp-reg-password-toggle" data-target="spRegPassword"
+                                        aria-label="Show password">
+                                        <i class="bi bi-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <!--- Confirm Password Field --->
+                            <div class="sp-reg-field">
+                                <label for="spRegConfirmPassword">CONFIRM PASSWORD</label>
+                                <div class="sp-reg-input-wrapper">
+                                    <i class="bi bi-shield-lock sp-reg-input-icon"></i>
+                                    <input type="password" id="spRegConfirmPassword"
+                                        class="sp-reg-input sp-reg-password-input" placeholder="Confirm your password"
+                                        required autocomplete="new-password">
+                                    <button type="button" class="sp-reg-password-toggle"
+                                        data-target="spRegConfirmPassword" aria-label="Show password">
+                                        <i class="bi bi-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <!--- Create Account Button --->
+                            <button type="submit" class="sp-reg-submit">
+                                <span>Create Your Account</span>
+                                <i class="bi bi-arrow-right"></i>
+                            </button>
+                        </form>
+                        <!--- Login Link --->
+                        <div class="sp-reg-login">
+                            <p>Already have an account? <a href="login.html">Sign In <i
+                                        class="bi bi-arrow-up-right"></i></a></p>
+                        </div>
+                        <!--- Back Home --->
+                        <a href="index.html" class="sp-reg-back">
+                            <i class="bi bi-arrow-left"></i>
+                            Back to Home
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--- Js Files --->
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+    <!-- Page JS -->
+    <script src="assets/js/auth.js"></script>
+</body>
+
+</html>

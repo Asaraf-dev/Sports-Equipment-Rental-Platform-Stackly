@@ -1,33 +1,33 @@
-//--- Components ---
+/*--- Components ---*/
 document.addEventListener("DOMContentLoaded",async function(){
-const csNavbarContainer=document.getElementById("navbar");
-const csFooterContainer=document.getElementById("footer");
-//--- Load Navbar ---
-if(csNavbarContainer){
+const spNavbarContainer=document.getElementById("navbar");
+const spFooterContainer=document.getElementById("footer");
+/*--- Load Navbar ---*/
+if(spNavbarContainer){
 try{
-const csNavbarResponse=await fetch("assets/components/navbar.html");
-if(!csNavbarResponse.ok){
+const spNavbarResponse=await fetch("assets/components/navbar.html");
+if(!spNavbarResponse.ok){
 throw new Error("Navbar component could not be loaded.");
 }
-const csNavbarHtml=await csNavbarResponse.text();
-csNavbarContainer.innerHTML=csNavbarHtml;
-document.dispatchEvent(new Event("csNavbarLoaded"));
-}catch(csNavbarError){
-console.error("Navbar Error:",csNavbarError);
+const spNavbarHtml=await spNavbarResponse.text();
+spNavbarContainer.innerHTML=spNavbarHtml;
+document.dispatchEvent(new Event("spNavbarLoaded"));
+}catch(spNavbarError){
+console.error("Navbar Error:",spNavbarError);
 }
 }
-//--- Load Footer ---
-if(csFooterContainer){
+/*--- Load Footer ---*/
+if(spFooterContainer){
 try{
-const csFooterResponse=await fetch("assets/components/footer.html");
-if(!csFooterResponse.ok){
+const spFooterResponse=await fetch("assets/components/footer.html");
+if(!spFooterResponse.ok){
 throw new Error("Footer component could not be loaded.");
 }
-const csFooterHtml=await csFooterResponse.text();
-csFooterContainer.innerHTML=csFooterHtml;
-document.dispatchEvent(new Event("csFooterLoaded"));
-}catch(csFooterError){
-console.error("Footer Error:",csFooterError);
+const spFooterHtml=await spFooterResponse.text();
+spFooterContainer.innerHTML=spFooterHtml;
+document.dispatchEvent(new Event("spFooterLoaded"));
+}catch(spFooterError){
+console.error("Footer Error:",spFooterError);
 }
 }
 });

@@ -1,0 +1,468 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sports Equipment | Dashboard </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Main favicon -->
+    <link rel="icon" href="favicon.ico" />
+    <!-- webp favicons -->
+    <link rel="icon" type="image/webp" sizes="16x16" href="assets/images/favicon-16x16.png" />
+    <link rel="icon" type="image/webp" sizes="32x32" href="assets/images/favicon-32x32.png" />
+    <!-- Apple -->
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
+    <!-- Android -->
+    <link rel="icon" type="image/webp" sizes="192x192" href="assets/images/android-chrome-192x192.png" />
+    <link rel="icon" type="image/webp" sizes="512x512" href="assets/images/android-chrome-512x512.png" />
+    <!-- Manifest -->
+    <link rel="manifest" href="assets/images/site.webmanifest" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!--- Bootstrap Icon --->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="assets/css/global.css" />
+    <link rel="stylesheet" href="assets/css/dashboard.css" />
+</head>
+
+<body>
+
+    <!--- Dashboard --->
+    <div class="sp-dash-layout">
+        <!--- Sidebar Overlay --->
+        <div class="sp-dash-overlay"></div>
+        <!--- Sidebar --->
+        <aside class="sp-dash-sidebar">
+            <!--- Sidebar Header --->
+            <div class="sp-dash-sidebar-header">
+                <a href="index.html" class="sp-dash-logo">
+                    <span class="sp-dash-logo-mark">
+                        <i class="bi bi-trophy-fill"></i>
+                    </span>
+                    <span class="sp-dash-logo-text">SPORT<span>RENT</span></span>
+                </a>
+                <button type="button" class="sp-dash-sidebar-close" aria-label="Close sidebar">
+                    <i class="bi bi-x-lg"></i>
+                </button>
+            </div>
+            <!--- Mobile User Email --->
+            <div class="sp-dash-sidebar-user">
+                <div class="sp-dash-sidebar-user-icon">
+                    <i class="bi bi-person"></i>
+                </div>
+                <div class="sp-dash-sidebar-user-content">
+                    <span>LOGGED IN AS</span>
+                    <strong class="sp-dash-sidebar-email">user@email.com</strong>
+                </div>
+            </div>
+            <!--- Sidebar Navigation --->
+            <nav class="sp-dash-sidebar-nav">
+                <a href="admin-dashboard.html" class="sp-dash-nav-link">
+                    <span class="sp-dash-nav-icon">
+                        <i class="bi bi-grid-1x2"></i>
+                    </span>
+                    <span>Dashboard</span>
+                </a>
+                <a href="admin-rental.html" class="sp-dash-nav-link">
+                    <span class="sp-dash-nav-icon">
+                        <i class="bi bi-box-seam"></i>
+                    </span>
+                    <span>Add Products</span>
+                </a>
+                <a href="admin-users.html" class="sp-dash-nav-link">
+                    <span class="sp-dash-nav-icon">
+                        <i class="bi bi-people"></i>
+                    </span>
+                    <span>Users</span>
+                </a>
+                <a href="admin-profile.html" class="sp-dash-nav-link">
+                    <span class="sp-dash-nav-icon">
+                        <i class="bi bi-person-circle"></i>
+                    </span>
+                    <span>Profile</span>
+                </a>
+                <button type="button" class="sp-dash-nav-link sp-dash-logout">
+                    <span class="sp-dash-nav-icon">
+                        <i class="bi bi-box-arrow-right"></i>
+                    </span>
+                    <span>Logout</span>
+                </button>
+            </nav>
+            <!--- Sidebar Bottom --->
+            <div class="sp-dash-sidebar-bottom">
+                <span class="sp-dash-sidebar-status"></span>
+                <span>SportRent Platform</span>
+            </div>
+        </aside>
+        <!--- Main Area --->
+        <div class="sp-dash-main">
+            <!--- Topbar --->
+            <header class="sp-dash-topbar">
+                <div class="sp-dash-topbar-left">
+                    <button type="button" class="sp-dash-menu-toggle" aria-label="Open menu" aria-expanded="false">
+                        <i class="bi bi-three-dots"></i>
+                    </button>
+                    <div class="sp-dash-page-title">
+                       
+                        <h1>Admin Dashboard</h1>
+                    </div>
+                </div>
+                <div class="sp-dash-topbar-right">
+                    <div class="sp-dash-topbar-user">
+                        <div class="sp-dash-topbar-user-content">
+                            <span>WELCOME BACK</span>
+                            <strong class="sp-dash-topbar-email">user@email.com</strong>
+                        </div>
+                        <div class="sp-dash-profile-image" title="Profile">
+                            <span class="sp-dash-profile-initials">SR</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+
+            <!--- Dashboard Content --->
+            <!--- Admin Profile --->
+            <!--- Admin Profile --->
+            <section class="sp-adm-profile">
+
+                <!--- Page Header --->
+                <div class="sp-adm-profile-heading">
+                    <div>
+                        <span class="sp-adm-profile-eyebrow">
+                            <i class="bi bi-person-gear"></i>
+                            Account Settings
+                        </span>
+
+                        <h1>My Profile</h1>
+
+                        <p>
+                            Manage your personal information and account details.
+                        </p>
+                    </div>
+
+                    <div class="sp-adm-profile-status">
+                        <span class="sp-adm-profile-status-dot"></span>
+                        Account Active
+                    </div>
+                </div>
+
+
+                <div class="sp-adm-profile-layout">
+
+                    <!--- Profile Summary --->
+                    <div class="sp-adm-profile-summary">
+
+                        <div class="sp-adm-profile-card sp-adm-profile-user-card">
+
+                            <div class="sp-adm-profile-avatar-wrap">
+
+                                <div class="sp-adm-profile-avatar">
+                                    <span id="spAdmProfileAvatarText">U</span>
+                                </div>
+
+                                <div class="sp-adm-profile-avatar-check">
+                                    <i class="bi bi-check-lg"></i>
+                                </div>
+
+                            </div>
+
+
+                            <div class="sp-adm-profile-user-details">
+
+                                <span class="sp-adm-profile-role-badge" id="spAdmProfileRole">
+                                    Admin
+                                </span>
+
+                                <h2 id="spAdmProfileName">
+                                    SportRent User
+                                </h2>
+
+                                <p id="spAdmProfileEmail">
+                                    user@email.com
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <!--- Account Information --->
+                        <div class="sp-adm-profile-card sp-adm-profile-account-card">
+
+                            <div class="sp-adm-profile-section-title">
+
+                                <div>
+                                    <span>ACCOUNT INFORMATION</span>
+                                    <h3>Your Details</h3>
+                                </div>
+
+                                <div class="sp-adm-profile-title-icon">
+                                    <i class="bi bi-person-vcard"></i>
+                                </div>
+
+                            </div>
+
+
+                            <div class="sp-adm-profile-info-list">
+
+                                <!--- Phone --->
+                                <div class="sp-adm-profile-info-item">
+
+                                    <div class="sp-adm-profile-info-icon">
+                                        <i class="bi bi-telephone"></i>
+                                    </div>
+
+                                    <div>
+                                        <span>Phone Number</span>
+
+                                        <strong id="spAdmProfilePhone">
+                                            Not Available
+                                        </strong>
+                                    </div>
+
+                                </div>
+
+
+                                <!--- Role --->
+                                <div class="sp-adm-profile-info-item">
+
+                                    <div class="sp-adm-profile-info-icon">
+                                        <i class="bi bi-person-badge"></i>
+                                    </div>
+
+                                    <div>
+                                        <span>Account Type</span>
+
+                                        <strong id="spAdmProfileRoleInfo">
+                                            Admin
+                                        </strong>
+                                    </div>
+
+                                </div>
+
+
+                                <!--- Email --->
+                                <div class="sp-adm-profile-info-item">
+
+                                    <div class="sp-adm-profile-info-icon">
+                                        <i class="bi bi-envelope"></i>
+                                    </div>
+
+                                    <div>
+                                        <span>Email Address</span>
+
+                                        <strong id="spAdmProfileEmailInfo">
+                                            user@email.com
+                                        </strong>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!--- Edit Profile --->
+                    <div class="sp-adm-profile-content">
+
+                        <form id="spAdmProfileForm" class="sp-adm-profile-card sp-adm-profile-form-card">
+
+                            <!--- Form Header --->
+                            <div class="sp-adm-profile-form-header">
+
+                                <div>
+
+                                    <span>PERSONAL INFORMATION</span>
+
+                                    <h2>
+                                        Update Your Profile
+                                    </h2>
+
+                                    <p>
+                                        Keep your account information up to date.
+                                    </p>
+
+                                </div>
+
+                                <div class="sp-adm-profile-header-icon">
+                                    <i class="bi bi-person-gear"></i>
+                                </div>
+
+                            </div>
+
+
+                            <!--- Form Grid --->
+                            <div class="sp-adm-profile-form-grid">
+
+                                <!--- Full Name --->
+                                <div class="sp-adm-profile-form-group">
+
+                                    <label for="spAdmProfileInputName">
+                                        Full Name <span>*</span>
+                                    </label>
+
+                                    <div class="sp-adm-profile-input-wrap">
+
+                                        <i class="bi bi-person"></i>
+
+                                        <input type="text" id="spAdmProfileInputName" name="fullName"
+                                            placeholder="Enter your full name" autocomplete="name" required>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!--- Phone --->
+                                <div class="sp-adm-profile-form-group">
+
+                                    <label for="spAdmProfileInputPhone">
+                                        Phone Number <span>*</span>
+                                    </label>
+
+                                    <div class="sp-adm-profile-input-wrap">
+
+                                        <i class="bi bi-telephone"></i>
+
+                                        <input type="tel" id="spAdmProfileInputPhone" name="phone"
+                                            placeholder="Enter 10 digit phone number" inputmode="numeric" minlength="10"
+                                            maxlength="10" autocomplete="tel" required>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!--- Email --->
+                                <div class="sp-adm-profile-form-group sp-adm-profile-full-width">
+
+                                    <label for="spAdmProfileInputEmail">
+                                        Email Address <span>*</span>
+                                    </label>
+
+                                    <div class="sp-adm-profile-input-wrap">
+
+                                        <i class="bi bi-envelope"></i>
+
+                                        <input type="email" id="spAdmProfileInputEmail" name="email"
+                                            placeholder="Enter your email address" autocomplete="email" required>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!--- Account Type --->
+                                <div class="sp-adm-profile-form-group sp-adm-profile-full-width">
+
+                                    <label for="spAdmProfileInputRole">
+                                        Account Type
+                                    </label>
+
+                                    <div class="sp-adm-profile-input-wrap sp-adm-profile-input-disabled">
+
+                                        <i class="bi bi-shield-check"></i>
+
+                                        <input type="text" id="spAdmProfileInputRole" readonly>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <!--- Form Actions --->
+                            <div class="sp-adm-profile-actions">
+
+                                <button type="reset" class="sp-adm-profile-reset-btn">
+                                    <i class="bi bi-arrow-counterclockwise"></i>
+                                    Reset
+                                </button>
+
+
+                                <button type="submit" class="sp-adm-profile-save-btn">
+                                    Save Changes
+                                    <i class="bi bi-arrow-right"></i>
+                                </button>
+
+                            </div>
+
+                        </form>
+
+
+                        <!--- Security Card --->
+                       <a href="404.html"> <div class="sp-adm-profile-card sp-adm-profile-security-card">
+
+                            <div class="sp-adm-profile-security-icon">
+                                <i class="bi bi-shield-lock"></i>
+                            </div>
+
+                            <div>
+
+                                <h3>Change Password</h3>
+
+                                <p>
+                                    Change you Account password.
+                                </p>
+
+                            </div>
+
+                        </div></a>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!--- Profile Success Popup --->
+            <div id="spAdmProfilePopup" class="sp-adm-profile-popup">
+
+                <div class="sp-adm-profile-popup-box" role="dialog" aria-modal="true">
+
+                    <div class="sp-adm-profile-popup-icon">
+                        <i class="bi bi-check-lg"></i>
+                    </div>
+
+                    <h3>Profile Updated</h3>
+
+                    <p>
+                        Your account information has been saved successfully.
+                    </p>
+
+                    <button type="button" id="spAdmProfilePopupClose">
+                        Continue
+                    </button>
+
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+    <!--- Js Files --->
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+    <!-- Page JS -->
+    <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/dashboard-profile.js"></script>
+</body>
+
+</html>

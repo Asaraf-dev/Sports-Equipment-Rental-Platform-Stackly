@@ -1,0 +1,898 @@
+/*--- Login Page ---*/
+.sp-log-page {
+    min-height: 100vh;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    background: #06101b;
+}
+
+.sp-log-page>.container {
+    width: 100%;
+}
+
+.sp-log-wrapper {
+    min-height: calc(100vh - 40px);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 1px solid rgba(255, 255, 255, .08);
+    border-radius: 24px;
+    background: #091a28;
+    overflow: hidden;
+}
+
+/*--- Login Brand ---*/
+.sp-log-brand {
+    position: relative;
+    padding: 55px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: #091522;
+}
+
+.sp-log-logo,
+.sp-log-mobile-logo {
+    position: relative;
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    width: max-content;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.sp-log-logo-mark {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #06101b;
+    border-radius: 12px;
+    background: #b8f53b;
+    font-size: 18px;
+    transform: rotate(-6deg);
+}
+
+.sp-log-logo-text {
+    font-size: 19px;
+    font-weight: 900;
+    letter-spacing: -.8px;
+}
+
+.sp-log-logo-text>span {
+    color: #b8f53b;
+}
+
+.sp-log-brand-content {
+    position: relative;
+    z-index: 2;
+    max-width: 470px;
+    margin: auto 0;
+}
+
+.sp-log-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: #b8f53b;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+}
+
+.sp-log-brand-content h1 {
+    margin: 20px 0;
+    color: #ffffff;
+    font-size: clamp(48px, 5vw, 76px);
+    font-weight: 800;
+    line-height: .98;
+    letter-spacing: -3px;
+}
+
+.sp-log-brand-content h1 span {
+    color: #b8f53b;
+}
+
+.sp-log-brand-content p {
+    max-width: 400px;
+    margin: 0;
+    color: rgba(255, 255, 255, .45);
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+/*--- Brand Stats ---*/
+.sp-log-brand-stats {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.sp-log-brand-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.sp-log-brand-stat strong {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.sp-log-brand-stat span {
+    color: rgba(255, 255, 255, .4);
+    font-size: 12px;
+}
+
+/*--- Brand Shapes ---*/
+.sp-log-brand-shape {
+    position: absolute;
+    border: 1px solid rgba(184, 245, 59, .1);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.sp-log-brand-shape-one {
+    width: 550px;
+    height: 550px;
+    right: -270px;
+    top: -250px;
+}
+
+.sp-log-brand-shape-two {
+    width: 400px;
+    height: 400px;
+    right: -180px;
+    top: -120px;
+}
+
+/*--- Form Panel ---*/
+.sp-log-form-panel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 55px;
+    background: #091a28;
+}
+
+.sp-log-form-container {
+    width: 100%;
+    max-width: 460px;
+}
+
+.sp-log-mobile-logo {
+    display: none;
+    margin-bottom: 55px;
+}
+
+/*--- Form Heading ---*/
+.sp-log-form-heading {
+    margin-bottom: 35px;
+}
+
+.sp-log-form-kicker {
+    color: #b8f53b;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.sp-log-form-heading h2 {
+    margin: 13px 0 10px;
+    color: #ffffff;
+    font-size: 38px;
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -1.5px;
+}
+
+.sp-log-form-heading p {
+    margin: 0;
+    color: rgba(255, 255, 255, .42);
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+/*--- Form ---*/
+.sp-log-form {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.sp-log-field {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.sp-log-field>label {
+    color: rgba(255, 255, 255, .5);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+/*--- Role Selector ---*/
+.sp-log-role-selector {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.sp-log-role-option {
+    position: relative;
+    margin: 0;
+    cursor: pointer;
+}
+
+.sp-log-role-option input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.sp-log-role-card {
+    min-height: 88px;
+    padding: 14px;
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    border: 1px solid rgba(255, 255, 255, .09);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, .02);
+    transition: border-color .3s ease, background .3s ease, transform .3s ease;
+}
+
+.sp-log-role-icon {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: rgba(255, 255, 255, .55);
+    border-radius: 11px;
+    background: rgba(255, 255, 255, .05);
+    font-size: 16px;
+    transition: background .3s ease, color .3s ease;
+}
+
+.sp-log-role-card>span:last-child {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.sp-log-role-card strong {
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.sp-log-role-card small {
+    color: rgba(255, 255, 255, .38);
+    font-size: 12px;
+}
+
+.sp-log-role-option input:checked+.sp-log-role-card {
+    border-color: #b8f53b;
+    background: rgba(184, 245, 59, .05);
+}
+
+.sp-log-role-option input:checked+.sp-log-role-card .sp-log-role-icon {
+    color: #06101b;
+    background: #b8f53b;
+}
+
+.sp-log-role-option:hover .sp-log-role-card {
+    transform: translateY(-2px);
+}
+
+/*--- Input Fields ---*/
+.sp-log-input-wrapper {
+    position: relative;
+}
+
+.sp-log-input-icon {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 17px;
+    color: rgba(255, 255, 255, .35);
+    font-size: 15px;
+    transform: translateY(-50%);
+    transition: color .3s ease;
+}
+
+.sp-log-input {
+    width: 100%;
+    height: 52px;
+    padding: 0 48px;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, .09);
+    border-radius: 12px;
+    outline: 0;
+    background: rgba(255, 255, 255, .025);
+    font-size: 12px;
+    transition: border-color .3s ease, box-shadow .3s ease;
+}
+
+.sp-log-input::placeholder {
+    color: rgba(255, 255, 255, .25);
+}
+
+.sp-log-input:focus {
+    border-color: rgba(184, 245, 59, .65);
+    box-shadow: 0 0 0 4px rgba(184, 245, 59, .05);
+}
+
+.sp-log-input:focus~.sp-log-input-icon {
+    color: #b8f53b;
+}
+
+.sp-log-password-toggle {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    right: 8px;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, .45);
+    border: 0;
+    border-radius: 9px;
+    background: transparent;
+    font-size: 15px;
+    cursor: pointer;
+    transform: translateY(-50%);
+    transition: color .3s ease, background .3s ease;
+}
+
+.sp-log-password-toggle:hover {
+    color: #b8f53b;
+    background: rgba(184, 245, 59, .06);
+}
+
+/*--- Remember Options ---*/
+.sp-log-options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: -2px;
+    white-space: nowrap;
+}
+
+.sp-log-remember {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+    color: rgba(255, 255, 255, .5);
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.sp-log-remember input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+
+.sp-log-custom-check {
+    width: 17px;
+    height: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border: 1px solid rgba(255, 255, 255, .2);
+    border-radius: 5px;
+    transition: border-color .25s ease, background .25s ease;
+}
+
+.sp-log-custom-check i {
+    color: #06101b;
+    font-size: 10px;
+    opacity: 0;
+    transform: scale(.5);
+    transition: opacity .25s ease, transform .25s ease;
+}
+
+.sp-log-remember input:checked+.sp-log-custom-check {
+    border-color: #b8f53b;
+    background: #b8f53b;
+}
+
+.sp-log-remember input:checked+.sp-log-custom-check i {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.sp-log-forgot {
+    color: #b8f53b;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.sp-log-forgot:hover {
+    text-decoration: underline;
+}
+
+/*--- Submit Button ---*/
+.sp-log-submit {
+    width: 100%;
+    height: 54px;
+    padding: 0 10px 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #06101b;
+    border: 0;
+    border-radius: 12px;
+    background: #b8f53b;
+    font-size: 12px;
+    font-weight: 900;
+    cursor: pointer;
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.sp-log-submit i {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9px;
+    background: rgba(6, 16, 27, .1);
+    font-size: 16px;
+    transition: transform .3s ease;
+}
+
+.sp-log-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(184, 245, 59, .13);
+}
+
+.sp-log-submit:hover i {
+    transform: translateX(4px);
+}
+
+/*--- Register ---*/
+.sp-log-register {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.sp-log-register p {
+    margin: 0;
+    color: rgba(255, 255, 255, .4);
+    font-size: 12px;
+}
+
+.sp-log-register a {
+    color: #b8f53b;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.sp-log-register a i {
+    font-size: 11px;
+}
+
+/*--- Back Home ---*/
+.sp-log-back {
+    margin-top: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: rgba(255, 255, 255, .4);
+    font-size: 12px;
+    text-decoration: none;
+    transition: color .3s ease;
+}
+
+.sp-log-back:hover {
+    color: #b8f53b;
+}
+
+/*--- Responsive 1050px ---*/
+@media(max-width:1050px) {
+    .sp-log-brand {
+        padding: 45px;
+    }
+
+    .sp-log-form-panel {
+        padding: 45px;
+    }
+}
+
+/*--- Responsive 991px ---*/
+@media(max-width:991px) {
+    .sp-log-page {
+        padding: 0;
+    }
+
+    .sp-log-page>.container {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .sp-log-wrapper {
+        min-height: 100vh;
+        border: 0;
+        border-radius: 0;
+        grid-template-columns: 1fr;
+    }
+
+    .sp-log-brand {
+        display: none;
+    }
+
+    .sp-log-form-panel {
+        min-height: 100vh;
+        padding: 60px 30px;
+    }
+
+    .sp-log-mobile-logo {
+        display: inline-flex;
+    }
+}
+
+/*--- Responsive 767px ---*/
+@media(max-width:767px) {
+    .sp-log-form-panel {
+        padding: 45px 24px;
+    }
+
+    .sp-log-mobile-logo {
+        margin-bottom: 45px;
+    }
+
+    .sp-log-form-heading h2 {
+        font-size: 34px;
+    }
+}
+
+/*--- Responsive 575px ---*/
+@media(max-width:575px) {
+    .sp-log-form-panel {
+        padding: 35px 18px;
+    }
+
+    .sp-log-mobile-logo {
+        margin-bottom: 35px;
+    }
+
+    .sp-log-logo-mark {
+        width: 38px;
+        height: 38px;
+        font-size: 16px;
+    }
+
+    .sp-log-logo-text {
+        font-size: 17px;
+    }
+
+    .sp-log-form-heading {
+        margin-bottom: 28px;
+    }
+
+    .sp-log-form-heading h2 {
+        font-size: 30px;
+    }
+
+    .sp-log-role-selector {
+        gap: 8px;
+    }
+
+    .sp-log-role-card {
+        min-height: 80px;
+        padding: 10px;
+        gap: 8px;
+    }
+
+    .sp-log-role-icon {
+        width: 34px;
+        height: 34px;
+    }
+
+    .sp-log-role-card strong {
+        font-size: 12px;
+    }
+
+    .sp-log-role-card small {
+        font-size: 10px;
+    }
+
+    .sp-log-options {
+        gap: 8px;
+    }
+
+    .sp-log-remember,
+    .sp-log-forgot {
+        font-size: 11px;
+    }
+}
+
+/*--- Mobile Logo ---*/
+.sp-log-mobile-logo-wrapper {
+    display: none;
+    width: 100%;
+}
+
+.sp-log-mobile-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    width: max-content;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/*--- Form Heading ---*/
+.sp-log-form-heading {
+    margin-bottom: 35px;
+}
+
+.sp-log-form-kicker {
+    display: inline-block;
+    color: #b8f53b;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+/*--- Responsive 991px ---*/
+@media(max-width:991px) {
+    .sp-log-mobile-logo-wrapper {
+        display: block;
+    }
+
+    .sp-log-form-panel {
+        min-height: 100vh;
+        padding: 60px 30px;
+    }
+}
+
+/*--- Responsive 767px ---*/
+@media(max-width:767px) {
+
+
+    .sp-log-form-heading h2 {
+        font-size: 34px;
+    }
+}
+
+/*--- Responsive 575px ---*/
+@media(max-width:575px) {
+
+
+    .sp-log-form-heading {
+        margin-bottom: 28px;
+    }
+
+    .sp-log-form-heading h2 {
+        font-size: 30px;
+    }
+}
+
+/*-----------------------------------------------------------------
+            Register Page
+------------------------------------------------------------------*/
+
+/*--- Register Page ---*/
+.sp-reg-page{min-height:100vh;padding:20px 0;display:flex;align-items:center;background:#06101b;}
+.sp-reg-page>.container{width:100%;}
+.sp-reg-wrapper{min-height:calc(100vh - 40px);display:grid;grid-template-columns:1fr 1fr;border:1px solid rgba(255,255,255,.08);border-radius:24px;background:#091a28;overflow:hidden;}
+/*--- Register Brand ---*/
+
+.sp-reg-logo,.sp-reg-mobile-logo{position:relative;z-index:2;display:inline-flex;align-items:center;gap:10px;width:max-content;color:#ffffff;text-decoration:none;}
+.sp-reg-logo-mark{width:42px;height:42px;display:flex;align-items:center;justify-content:center;color:#06101b;border-radius:12px;background:#b8f53b;font-size:18px;transform:rotate(-6deg);}
+.sp-reg-logo-text{font-size:19px;font-weight:900;letter-spacing:-.8px;}
+.sp-reg-logo-text>span{color:#b8f53b;}
+.sp-reg-label{display:inline-flex;align-items:center;gap:7px;color:#b8f53b;font-size:12px;font-weight:800;letter-spacing:1.4px;}
+.sp-reg-brand-content h1{margin:20px 0;color:#ffffff;font-size:clamp(48px,5vw,76px);font-weight:800;line-height:.98;letter-spacing:-3px;}
+.sp-reg-brand-content h1 span{color:#b8f53b;}
+.sp-reg-brand-content p{max-width:410px;margin:0;color:rgba(255,255,255,.45);font-size:12px;line-height:1.9;}
+/*--- Brand Points ---*/
+.sp-reg-brand-points{position:relative;z-index:2;display:flex;flex-direction:column;gap:13px;}
+.sp-reg-brand-point{display:flex;align-items:center;gap:10px;color:rgba(255,255,255,.55);font-size:12px;}
+.sp-reg-brand-point i{color:#b8f53b;font-size:16px;}
+/*--- Brand Shapes ---*/
+.sp-reg-brand-shape{position:absolute;border:1px solid rgba(184,245,59,.1);border-radius:50%;pointer-events:none;}
+.sp-reg-brand-shape-one{width:550px;height:550px;right:-270px;top:-250px;}
+.sp-reg-brand-shape-two{width:400px;height:400px;right:-180px;top:-120px;}
+/*--- Register Form Panel ---*/
+.sp-reg-form-panel{display:flex;align-items:center;justify-content:center;padding:55px;background:#091a28;}
+.sp-reg-form-container{width:100%;max-width:460px;}
+.sp-reg-mobile-logo-wrapper{display:none;width:100%;}
+.sp-reg-mobile-logo{display:inline-flex;align-items:center;gap:10px;width:max-content;color:#ffffff;text-decoration:none;}
+/*--- Form Heading ---*/
+.sp-reg-form-heading{margin-bottom:30px;}
+.sp-reg-form-kicker{display:inline-block;color:#b8f53b;font-size:12px;font-weight:800;letter-spacing:1.5px;}
+.sp-reg-form-heading h2{margin:13px 0 10px;color:#ffffff;font-size:38px;font-weight:800;line-height:1.1;letter-spacing:-1.5px;}
+.sp-reg-form-heading p{margin:0;color:rgba(255,255,255,.42);font-size:12px;line-height:1.8;}
+/*--- Register Form ---*/
+.sp-reg-form{display:flex;flex-direction:column;gap:18px;}
+.sp-reg-field{display:flex;flex-direction:column;gap:8px;}
+.sp-reg-field>label{color:rgba(255,255,255,.5);font-size:12px;font-weight:800;letter-spacing:1px;}
+/*--- Role Selector ---*/
+.sp-reg-role-selector{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.sp-reg-role-option{position:relative;margin:0;cursor:pointer;}
+.sp-reg-role-option input{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none;}
+.sp-reg-role-card{min-height:82px;padding:13px;display:flex;align-items:center;gap:10px;border:1px solid rgba(255,255,255,.09);border-radius:14px;background:rgba(255,255,255,.02);transition:border-color .3s ease,background .3s ease,transform .3s ease;}
+.sp-reg-role-icon{width:36px;height:36px;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:rgba(255,255,255,.55);border-radius:10px;background:rgba(255,255,255,.05);font-size:15px;transition:background .3s ease,color .3s ease;}
+.sp-reg-role-card>span:last-child{display:flex;flex-direction:column;gap:3px;}
+.sp-reg-role-card strong{color:#ffffff;font-size:13px;font-weight:800;}
+.sp-reg-role-card small{color:rgba(255,255,255,.38);font-size:11px;}
+.sp-reg-role-option input:checked+.sp-reg-role-card{border-color:#b8f53b;background:rgba(184,245,59,.05);}
+.sp-reg-role-option input:checked+.sp-reg-role-card .sp-reg-role-icon{color:#06101b;background:#b8f53b;}
+.sp-reg-role-option:hover .sp-reg-role-card{transform:translateY(-2px);}
+/*--- Input Fields ---*/
+.sp-reg-input-wrapper{position:relative;}
+.sp-reg-input-icon{position:absolute;z-index:1;top:50%;left:17px;color:rgba(255,255,255,.35);font-size:15px;transform:translateY(-50%);transition:color .3s ease;}
+.sp-reg-input{width:100%;height:50px;padding:0 48px;color:#ffffff;border:1px solid rgba(255,255,255,.09);border-radius:12px;outline:0;background:rgba(255,255,255,.025);font-size:12px;transition:border-color .3s ease,box-shadow .3s ease;}
+.sp-reg-input::placeholder{color:rgba(255,255,255,.25);}
+.sp-reg-input:focus{border-color:rgba(184,245,59,.65);box-shadow:0 0 0 4px rgba(184,245,59,.05);}
+.sp-reg-input-wrapper:focus-within .sp-reg-input-icon{color:#b8f53b;}
+.sp-reg-password-toggle{position:absolute;z-index:2;top:50%;right:8px;width:38px;height:38px;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.45);border:0;border-radius:9px;background:transparent;font-size:15px;cursor:pointer;transform:translateY(-50%);transition:color .3s ease,background .3s ease;}
+.sp-reg-password-toggle:hover{color:#b8f53b;background:rgba(184,245,59,.06);}
+/*--- Submit Button ---*/
+.sp-reg-submit{width:100%;height:54px;padding:0 10px 0 20px;display:flex;align-items:center;justify-content:space-between;color:#06101b;border:0;border-radius:12px;background:#b8f53b;font-size:12px;font-weight:900;cursor:pointer;transition:transform .3s ease,box-shadow .3s ease;}
+.sp-reg-submit i{width:38px;height:38px;display:flex;align-items:center;justify-content:center;border-radius:9px;background:rgba(6,16,27,.1);font-size:16px;transition:transform .3s ease;}
+.sp-reg-submit:hover{transform:translateY(-2px);box-shadow:0 12px 25px rgba(184,245,59,.13);}
+.sp-reg-submit:hover i{transform:translateX(4px);}
+/*--- Login Link ---*/
+.sp-reg-login{margin-top:22px;text-align:center;}
+.sp-reg-login p{margin:0;color:rgba(255,255,255,.4);font-size:12px;}
+.sp-reg-login a{color:#b8f53b;font-weight:800;text-decoration:none;}
+.sp-reg-login a i{font-size:11px;}
+/*--- Back Home ---*/
+.sp-reg-back{margin-top:30px;display:flex;align-items:center;justify-content:center;gap:8px;color:rgba(255,255,255,.4);font-size:12px;text-decoration:none;transition:color .3s ease;}
+.sp-reg-back:hover{color:#b8f53b;}
+/*--- Responsive 1050px ---*/
+@media(max-width:1050px){
+.sp-reg-form-panel{padding:45px;}
+}
+/*--- Responsive 991px ---*/
+@media(max-width:991px){
+.sp-reg-page{padding:0;}
+.sp-reg-page>.container{max-width:100%;padding:0;}
+.sp-reg-wrapper{min-height:100vh;border:0;border-radius:0;grid-template-columns:1fr;}
+.sp-reg-form-panel{min-height:100vh;padding:60px 30px;}
+.sp-reg-mobile-logo-wrapper{display:block;margin-bottom:35px;}
+}
+/*--- Responsive 767px ---*/
+@media(max-width:767px){
+.sp-reg-form-panel{padding:45px 24px;}
+.sp-reg-mobile-logo-wrapper{margin-bottom:30px;}
+.sp-reg-form-heading h2{font-size:34px;}
+}
+/*--- Responsive 575px ---*/
+@media(max-width:575px){
+.sp-reg-form-panel{padding:35px 18px;}
+.sp-reg-mobile-logo-wrapper{margin-bottom:28px;}
+.sp-reg-logo-mark{width:38px;height:38px;font-size:16px;}
+.sp-reg-logo-text{font-size:17px;}
+.sp-reg-form-heading{margin-bottom:25px;}
+.sp-reg-form-heading h2{font-size:30px;}
+.sp-reg-role-selector{gap:8px;}
+.sp-reg-role-card{min-height:76px;padding:10px;gap:8px;}
+.sp-reg-role-icon{width:34px;height:34px;}
+.sp-reg-role-card strong{font-size:12px;}
+.sp-reg-role-card small{font-size:10px;}
+}
+
+/*--- Register Brand ---*/
+.sp-reg-brand{
+position:relative;
+padding:55px;
+display:flex;
+flex-direction:column;
+overflow:hidden;
+background:#091522;
+justify-content: space-evenly;
+}
+/*--- Register Brand Content ---*/
+.sp-reg-brand-content{
+position:relative;
+z-index:2;
+max-width:470px;
+margin-top:150px;
+margin-bottom:35px;
+}
+/*--- Brand Label ---*/
+.sp-reg-label{
+display:inline-flex;
+align-items:center;
+gap:7px;
+color:#b8f53b;
+font-size:12px;
+font-weight:800;
+letter-spacing:1.4px;
+margin-bottom:18px;
+}
+/*--- Brand Heading ---*/
+.sp-reg-brand-content h1{
+margin:0 0 20px;
+color:#ffffff;
+font-size:clamp(48px,5vw,76px);
+font-weight:800;
+line-height:.98;
+letter-spacing:-3px;
+}
+.sp-reg-brand-content h1 span{
+color:#b8f53b;
+}
+/*--- Brand Description ---*/
+.sp-reg-brand-content p{
+max-width:410px;
+margin:0;
+color:rgba(255,255,255,.45);
+font-size:12px;
+line-height:1.9;
+}
+/*--- Brand Points ---*/
+.sp-reg-brand-points{
+position:relative;
+z-index:2;
+display:flex;
+flex-direction:column;
+gap:13px;
+margin-top:20px;
+}
+
+/*--- Responsive 1050px ---*/
+@media(max-width:1050px){
+.sp-reg-brand{
+padding:45px;
+}
+.sp-reg-brand-content{
+margin-top:110px;
+}
+.sp-reg-form-panel{
+padding:45px;
+}
+}
+/*--- Responsive 991px ---*/
+@media(max-width:991px){
+.sp-reg-page{
+padding:0;
+}
+.sp-reg-page>.container{
+max-width:100%;
+padding:0;
+}
+.sp-reg-wrapper{
+min-height:100vh;
+border:0;
+border-radius:0;
+grid-template-columns:1fr;
+}
+.sp-reg-brand{
+display:none;
+}
+.sp-reg-form-panel{
+min-height:100vh;
+padding:60px 30px;
+}
+.sp-reg-mobile-logo-wrapper{
+display:block;
+margin-bottom:35px;
+}
+}

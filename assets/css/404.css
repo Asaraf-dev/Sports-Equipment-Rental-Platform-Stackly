@@ -1,0 +1,517 @@
+/*--- 404 Page ---*/
+.sp-err-page {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    color: #fff;
+    background: #06101b;
+}
+
+/*--- Background ---*/
+.sp-err-bg-glow {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    filter: blur(100px);
+    pointer-events: none;
+}
+
+.sp-err-bg-glow-one {
+    top: -220px;
+    left: -180px;
+    background: rgba(184, 245, 59, .07);
+}
+
+.sp-err-bg-glow-two {
+    right: -200px;
+    bottom: -250px;
+    background: rgba(56, 189, 248, .05);
+}
+
+.sp-err-grid {
+    position: absolute;
+    inset: 0;
+    opacity: .25;
+    background-image: linear-gradient(rgba(255, 255, 255, .025) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, .025) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: linear-gradient(to bottom, transparent, #000 25%, #000 75%, transparent);
+}
+
+.sp-err-particles {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.sp-err-particle {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: #b8f53b;
+    opacity: 0;
+    animation: spErrParticle 5s ease-in-out infinite;
+}
+
+@keyframes spErrParticle {
+
+    0%,
+    100% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    30% {
+        opacity: .35;
+    }
+
+    60% {
+        opacity: .7;
+        transform: translate(20px, -30px);
+    }
+
+    80% {
+        opacity: .2;
+    }
+}
+
+/*--- Floating Sports ---*/
+.sp-err-sport {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(184, 245, 59, .55);
+    border: 1px solid rgba(184, 245, 59, .13);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, .025);
+    font-size: 17px;
+    animation: spErrFloat 4s ease-in-out infinite;
+}
+
+.sp-err-sport-one {
+    top: 19%;
+    left: 13%;
+    animation-delay: 0s;
+}
+
+.sp-err-sport-two {
+    top: 28%;
+    right: 15%;
+    animation-delay: 1s;
+}
+
+.sp-err-sport-three {
+    bottom: 20%;
+    left: 18%;
+    animation-delay: 2s;
+}
+
+.sp-err-sport-four {
+    right: 17%;
+    bottom: 18%;
+    animation-delay: 3s;
+}
+
+@keyframes spErrFloat {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0);
+        opacity: .45;
+    }
+
+    50% {
+        transform: translateY(-12px) rotate(7deg);
+        opacity: .85;
+    }
+}
+
+/*--- 404 Content ---*/
+.sp-err-content {
+    position: relative;
+    z-index: 2;
+    max-width: 850px;
+    margin: auto;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/*--- Logo ---*/
+.sp-err-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.sp-err-logo-mark {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #06101b;
+    background: linear-gradient(135deg, #d5ff7a, #b8f53b);
+    border-radius: 13px;
+    font-size: 18px;
+    box-shadow: 0 10px 30px rgba(184, 245, 59, .16);
+    transition: all .35s ease;
+}
+
+.sp-err-logo-text {
+    color: #fff;
+    font-family: var(--sp-font-heading);
+    font-size: 19px;
+    font-weight: 800;
+    letter-spacing: -.6px;
+}
+
+.sp-err-logo-text span {
+    color: #b8f53b;
+}
+
+.sp-err-logo:hover .sp-err-logo-mark {
+    transform: rotate(-8deg) scale(1.07);
+    box-shadow: 0 14px 35px rgba(184, 245, 59, .25);
+}
+
+/*--- Error Number ---*/
+.sp-err-number-wrap {
+    height: 220px;
+    margin: 20px auto 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.sp-err-number {
+    color: #fff;
+    font-family: var(--sp-font-heading);
+    font-size: clamp(150px, 20vw, 240px);
+    font-weight: 800;
+    letter-spacing: -15px;
+    line-height: .8;
+    text-shadow: 0 20px 50px rgba(0, 0, 0, .3);
+}
+
+.sp-err-number-ball {
+    width: 115px;
+    height: 115px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #06101b;
+    border: 8px solid rgba(184, 245, 59, .15);
+    border-radius: 50%;
+    background: linear-gradient(135deg, #d5ff7a, #b8f53b);
+    font-size: 46px;
+    box-shadow: 0 0 60px rgba(184, 245, 59, .15);
+    animation: spErrBall 3s ease-in-out infinite;
+}
+
+@keyframes spErrBall {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0);
+    }
+
+    50% {
+        transform: translateY(-12px) rotate(180deg);
+    }
+}
+
+/*--- Error Badge ---*/
+.sp-err-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 8px 13px;
+    color: #b8f53b;
+    border: 1px solid rgba(184, 245, 59, .15);
+    border-radius: 50px;
+    background: rgba(184, 245, 59, .05);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+}
+
+/*--- Error Title ---*/
+.sp-err-title {
+    margin-top: 17px;
+    color: #fff;
+    font-size: clamp(30px, 4vw, 48px);
+    font-weight: 700;
+    letter-spacing: -1.5px;
+    line-height: 1.1;
+}
+
+.sp-err-description {
+    max-width: 590px;
+    margin: 17px auto 0;
+    color: rgba(255, 255, 255, .48);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/*--- Error Actions ---*/
+.sp-err-actions {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.sp-err-btn {
+    min-height: 52px;
+    padding: 0 23px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    border-radius: 13px;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all .35s ease;
+}
+
+.sp-err-btn-back {
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, .13);
+    background: rgba(255, 255, 255, .045);
+}
+
+.sp-err-btn-back:hover {
+    color: #06101b;
+    border-color: #b8f53b;
+    background: #b8f53b;
+    transform: translateY(-3px);
+}
+
+.sp-err-btn-home {
+    color: #06101b;
+    border: 1px solid #b8f53b;
+    background: #b8f53b;
+}
+
+.sp-err-btn-home:hover {
+    color: #06101b;
+    border-color: #d5ff7a;
+    background: #d5ff7a;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(184, 245, 59, .18);
+}
+
+.sp-err-btn i {
+    transition: transform .3s ease;
+}
+
+.sp-err-btn-back:hover i {
+    transform: translateX(-4px);
+}
+
+.sp-err-btn-home:hover i {
+    transform: translate(3px, -3px);
+}
+
+/*--- Error Code ---*/
+.sp-err-code {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: rgba(255, 255, 255, .2);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.sp-err-code strong {
+    color: rgba(184, 245, 59, .5);
+    font-size: 11px;
+}
+
+/*--- Responsive 1050px ---*/
+@media(max-width:1050px) {
+    .sp-err-content {
+        padding: 20px 25px;
+    }
+
+    .sp-err-sport-one {
+        left: 7%;
+    }
+
+    .sp-err-sport-two {
+        right: 8%;
+    }
+
+    .sp-err-sport-three {
+        left: 10%;
+    }
+
+    .sp-err-sport-four {
+        right: 10%;
+    }
+}
+
+/*--- Responsive 991px ---*/
+@media(max-width:991px) {
+    .sp-err-number-wrap {
+        height: 190px;
+    }
+
+    .sp-err-number-ball {
+        width: 95px;
+        height: 95px;
+        font-size: 38px;
+    }
+}
+
+/*--- Responsive 767px ---*/
+@media(max-width:767px) {
+    .sp-err-content {
+        padding: 20px 20px;
+    }
+
+    .sp-err-number-wrap {
+        height: 165px;
+        gap: 10px;
+    }
+
+    .sp-err-number {
+        font-size: 150px;
+        letter-spacing: -10px;
+    }
+
+    .sp-err-number-ball {
+        width: 78px;
+        height: 78px;
+        border-width: 6px;
+        font-size: 30px;
+    }
+
+    .sp-err-sport {
+        width: 40px;
+        height: 40px;
+        border-radius: 12px;
+        font-size: 14px;
+    }
+
+    .sp-err-sport-one {
+        top: 14%;
+        left: 5%;
+    }
+
+    .sp-err-sport-two {
+        top: 20%;
+        right: 5%;
+    }
+
+    .sp-err-sport-three {
+        bottom: 15%;
+        left: 6%;
+    }
+
+    .sp-err-sport-four {
+        right: 6%;
+        bottom: 13%;
+    }
+
+    .sp-err-title {
+        font-size: 32px;
+    }
+}
+
+/*--- Responsive 575px ---*/
+@media(max-width:575px) {
+    .sp-err-content {
+        padding: 20px 15px;
+    }
+
+    .sp-err-logo-mark {
+        width: 38px;
+        height: 38px;
+        border-radius: 11px;
+        font-size: 16px;
+    }
+
+    .sp-err-logo-text {
+        font-size: 17px;
+    }
+
+    .sp-err-number-wrap {
+        height: 125px;
+        margin-top: 30px;
+        gap: 6px;
+    }
+
+    .sp-err-number {
+        font-size: 105px;
+        letter-spacing: -7px;
+    }
+
+    .sp-err-number-ball {
+        width: 60px;
+        height: 60px;
+        border-width: 5px;
+        font-size: 22px;
+    }
+
+    .sp-err-badge {
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+    .sp-err-title {
+        margin-top: 14px;
+        font-size: 27px;
+        letter-spacing: -.8px;
+    }
+
+    .sp-err-description {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    .sp-err-actions {
+        margin-top: 25px;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .sp-err-btn {
+        width: 100%;
+        min-height: 49px;
+    }
+
+    .sp-err-code {
+        margin-top: 25px;
+    }
+
+    .sp-err-sport {
+        display: none;
+    }
+}
+
+/*--- Reduced Motion ---*/
+@media(prefers-reduced-motion:reduce) {
+
+    .sp-err-page *,
+    .sp-err-page *::before,
+    .sp-err-page *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}

@@ -1,0 +1,493 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sports Equipment | Dashboard </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Main favicon -->
+    <link rel="icon" href="favicon.ico" />
+    <!-- webp favicons -->
+    <link rel="icon" type="image/webp" sizes="16x16" href="assets/images/favicon-16x16.png" />
+    <link rel="icon" type="image/webp" sizes="32x32" href="assets/images/favicon-32x32.png" />
+    <!-- Apple -->
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
+    <!-- Android -->
+    <link rel="icon" type="image/webp" sizes="192x192" href="assets/images/android-chrome-192x192.png" />
+    <link rel="icon" type="image/webp" sizes="512x512" href="assets/images/android-chrome-512x512.png" />
+    <!-- Manifest -->
+    <link rel="manifest" href="assets/images/site.webmanifest" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!--- Bootstrap Icon --->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="assets/css/global.css" />
+    <link rel="stylesheet" href="assets/css/dashboard.css" />
+</head>
+
+<body>
+
+    <!--- Dashboard --->
+    <div class="sp-dash-layout">
+        <!--- Sidebar Overlay --->
+        <div class="sp-dash-overlay"></div>
+        <!--- Sidebar --->
+        <aside class="sp-dash-sidebar">
+            <!--- Sidebar Header --->
+            <div class="sp-dash-sidebar-header">
+                <a href="index.html" class="sp-dash-logo">
+                    <span class="sp-dash-logo-mark">
+                        <i class="bi bi-trophy-fill"></i>
+                    </span>
+                    <span class="sp-dash-logo-text">SPORT<span>RENT</span></span>
+                </a>
+                <button type="button" class="sp-dash-sidebar-close" aria-label="Close sidebar">
+                    <i class="bi bi-x-lg"></i>
+                </button>
+            </div>
+            <!--- Mobile User Email --->
+            <div class="sp-dash-sidebar-user">
+                <div class="sp-dash-sidebar-user-icon">
+                    <i class="bi bi-person"></i>
+                </div>
+                <div class="sp-dash-sidebar-user-content">
+                    <span>LOGGED IN AS</span>
+                    <strong class="sp-dash-sidebar-email">user@email.com</strong>
+                </div>
+            </div>
+            <!--- Sidebar Navigation --->
+            <nav class="sp-dash-sidebar-nav">
+                <a href="client-dashboard.html" class="sp-dash-nav-link">
+                    <span class="sp-dash-nav-icon">
+                        <i class="bi bi-grid-1x2"></i>
+                    </span>
+                    <span>Dashboard</span>
+                </a>
+                <a href="client-rental.html" class="sp-dash-nav-link">
+                    <span class="sp-dash-nav-icon">
+                        <i class="bi bi-box-seam"></i>
+                    </span>
+                    <span>Rental</span>
+                </a>
+                <a href="client-cart.html" class="sp-dash-nav-link">
+                    <span class="sp-dash-nav-icon">
+                        <i class="bi bi-bag"></i>
+                    </span>
+                    <span>Cart</span>
+                </a>
+                <a href="client-profile.html" class="sp-dash-nav-link">
+                    <span class="sp-dash-nav-icon">
+                        <i class="bi bi-person-circle"></i>
+                    </span>
+                    <span>Profile</span>
+                </a>
+                <button type="button" class="sp-dash-nav-link sp-dash-logout">
+                    <span class="sp-dash-nav-icon">
+                        <i class="bi bi-box-arrow-right"></i>
+                    </span>
+                    <span>Logout</span>
+                </button>
+            </nav>
+            <!--- Sidebar Bottom --->
+            <div class="sp-dash-sidebar-bottom">
+                <span class="sp-dash-sidebar-status"></span>
+                <span>SportRent Platform</span>
+            </div>
+        </aside>
+        <!--- Main Area --->
+        <div class="sp-dash-main">
+            <!--- Topbar --->
+            <header class="sp-dash-topbar">
+                <div class="sp-dash-topbar-left">
+                    <button type="button" class="sp-dash-menu-toggle" aria-label="Open menu" aria-expanded="false">
+                        <i class="bi bi-three-dots"></i>
+                    </button>
+                    <div class="sp-dash-page-title">
+
+                        <h1>client Dashboard</h1>
+                    </div>
+                </div>
+                <div class="sp-dash-topbar-right">
+                    <div class="sp-dash-topbar-user">
+                        <div class="sp-dash-topbar-user-content">
+                            <span>WELCOME BACK</span>
+                            <strong class="sp-dash-topbar-email">user@email.com</strong>
+                        </div>
+                        <div class="sp-dash-profile-image" title="Profile">
+                            <span class="sp-dash-profile-initials">SR</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+
+            <!--- Dashboard Content --->
+            <!--- Client Rental --->
+            <section class="sp-cli-rental">
+                <!--- Page Header --->
+                <div class="sp-cli-rental-heading">
+                    <div class="sp-cli-rental-heading-content">
+                        <span class="sp-cli-rental-eyebrow">
+                            <i class="bi bi-box-seam"></i>
+                            Rental Equipment
+                        </span>
+                        <h1>Find The Right <span>Gear.</span></h1>
+                        <p>Explore quality sports equipment and choose the gear you need for your next game, training
+                            session or adventure.</p>
+                    </div>
+                    <div class="sp-cli-rental-heading-info">
+                        <span>Available Equipment</span>
+                        <strong id="spCliRentalCount">12</strong>
+                    </div>
+                </div>
+                <!--- Rental Toolbar --->
+                <div class="sp-cli-rental-toolbar">
+                    <!--- Search --->
+                    <div class="sp-cli-rental-search">
+                        <i class="bi bi-search"></i>
+                        <input type="search" id="spCliRentalSearch" placeholder="Search equipment...">
+                    </div>
+                    <!--- Filter --->
+                    <div class="sp-cli-rental-filter">
+                        <i class="bi bi-funnel"></i>
+                        <select id="spCliRentalFilter">
+                            <option value="all">All Sports</option>
+                            <option value="football">Football</option>
+                            <option value="cricket">Cricket</option>
+                            <option value="badminton">Badminton</option>
+                            <option value="basketball">Basketball</option>
+                            <option value="fitness">Fitness</option>
+                            <option value="tennis">Tennis</option>
+                        </select>
+                    </div>
+                </div>
+                <!--- Rental Categories --->
+                <div class="sp-cli-rental-categories">
+                    <button type="button" class="sp-cli-rental-category active" data-category="all">
+                        <i class="bi bi-grid"></i>
+                        <span>All</span>
+                    </button>
+                    <button type="button" class="sp-cli-rental-category" data-category="football">
+                        <i class="bi bi-dribbble"></i>
+                        <span>Football</span>
+                    </button>
+                    <button type="button" class="sp-cli-rental-category" data-category="cricket">
+                        <i class="bi bi-trophy"></i>
+                        <span>Cricket</span>
+                    </button>
+                    <button type="button" class="sp-cli-rental-category" data-category="badminton">
+                        <i class="bi bi-lightning"></i>
+                        <span>Badminton</span>
+                    </button>
+                    <button type="button" class="sp-cli-rental-category" data-category="basketball">
+                        <i class="bi bi-circle"></i>
+                        <span>Basketball</span>
+                    </button>
+                    <button type="button" class="sp-cli-rental-category" data-category="fitness">
+                        <i class="bi bi-activity"></i>
+                        <span>Fitness</span>
+                    </button>
+                    <button type="button" class="sp-cli-rental-category" data-category="tennis">
+                        <i class="bi bi-record-circle"></i>
+                        <span>Tennis</span>
+                    </button>
+                </div>
+                <!--- Rental Grid --->
+                <div class="sp-cli-rental-grid" id="spCliRentalGrid">
+                    <!--- Product Card --->
+                    <article class="sp-cli-rental-card" data-category="football"
+                        data-name="Professional Match Football">
+                        <div class="sp-cli-rental-card-image">
+                            <img src="assets/images/rental/football.webp" alt="Professional Match Football">
+                            <span class="sp-cli-rental-card-tag">Popular</span>
+                            <button type="button" class="sp-cli-rental-wishlist" aria-label="Add to wishlist">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                        </div>
+                        <div class="sp-cli-rental-card-content">
+                            <span class="sp-cli-rental-card-category">Football</span>
+                            <h2>Professional Match Football</h2>
+                            <p>Premium match-quality football designed for training and competitive games.</p>
+                            <div class="sp-cli-rental-card-meta">
+                                <span><i class="bi bi-star-fill"></i> 4.9</span>
+                                <span><i class="bi bi-box"></i> Available</span>
+                            </div>
+                            <div class="sp-cli-rental-card-bottom">
+                                <div class="sp-cli-rental-price">
+                                    <strong>₹150</strong>
+                                    <span>/ day</span>
+                                </div>
+                                <button type="button" class="sp-cli-rental-add-cart"
+                                    data-product="Professional Match Football">
+                                    <i class="bi bi-bag-plus"></i>
+                                    <span>Add</span>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                    <!--- Product Card --->
+                    <article class="sp-cli-rental-card" data-category="cricket" data-name="Premium English Willow Bat">
+                        <div class="sp-cli-rental-card-image">
+                            <img src="assets/images/rental/cricket-bat.webp" alt="Premium English Willow Bat">
+                            <button type="button" class="sp-cli-rental-wishlist" aria-label="Add to wishlist">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                        </div>
+                        <div class="sp-cli-rental-card-content">
+                            <span class="sp-cli-rental-card-category">Cricket</span>
+                            <h2>Premium English Willow Bat</h2>
+                            <p>Balanced professional cricket bat suitable for practice and match play.</p>
+                            <div class="sp-cli-rental-card-meta">
+                                <span><i class="bi bi-star-fill"></i> 4.8</span>
+                                <span><i class="bi bi-box"></i> Available</span>
+                            </div>
+                            <div class="sp-cli-rental-card-bottom">
+                                <div class="sp-cli-rental-price">
+                                    <strong>₹300</strong>
+                                    <span>/ day</span>
+                                </div>
+                                <button type="button" class="sp-cli-rental-add-cart"
+                                    data-product="Premium English Willow Bat">
+                                    <i class="bi bi-bag-plus"></i>
+                                    <span>Add</span>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                    <!--- Product Card --->
+                    <article class="sp-cli-rental-card" data-category="badminton" data-name="Yonex Professional Racket">
+                        <div class="sp-cli-rental-card-image">
+                            <img src="assets/images/rental/badminton.webp" alt="Yonex Professional Racket">
+                            <span class="sp-cli-rental-card-tag">Best Choice</span>
+                            <button type="button" class="sp-cli-rental-wishlist" aria-label="Add to wishlist">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                        </div>
+                        <div class="sp-cli-rental-card-content">
+                            <span class="sp-cli-rental-card-category">Badminton</span>
+                            <h2>Yonex Professional Racket</h2>
+                            <p>Lightweight and powerful racket for competitive badminton sessions.</p>
+                            <div class="sp-cli-rental-card-meta">
+                                <span><i class="bi bi-star-fill"></i> 4.9</span>
+                                <span><i class="bi bi-box"></i> Available</span>
+                            </div>
+                            <div class="sp-cli-rental-card-bottom">
+                                <div class="sp-cli-rental-price">
+                                    <strong>₹200</strong>
+                                    <span>/ day</span>
+                                </div>
+                                <button type="button" class="sp-cli-rental-add-cart"
+                                    data-product="Yonex Professional Racket">
+                                    <i class="bi bi-bag-plus"></i>
+                                    <span>Add</span>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                    <!--- Product Card --->
+                    <article class="sp-cli-rental-card" data-category="basketball" data-name="Official Basketball">
+                        <div class="sp-cli-rental-card-image">
+                            <img src="assets/images/rental/basketball.webp" alt="Official Basketball">
+                            <button type="button" class="sp-cli-rental-wishlist" aria-label="Add to wishlist">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                        </div>
+                        <div class="sp-cli-rental-card-content">
+                            <span class="sp-cli-rental-card-category">Basketball</span>
+                            <h2>Official Basketball</h2>
+                            <p>Durable grip and professional construction for indoor and outdoor games.</p>
+                            <div class="sp-cli-rental-card-meta">
+                                <span><i class="bi bi-star-fill"></i> 4.7</span>
+                                <span><i class="bi bi-box"></i> Available</span>
+                            </div>
+                            <div class="sp-cli-rental-card-bottom">
+                                <div class="sp-cli-rental-price">
+                                    <strong>₹180</strong>
+                                    <span>/ day</span>
+                                </div>
+                                <button type="button" class="sp-cli-rental-add-cart" data-product="Official Basketball">
+                                    <i class="bi bi-bag-plus"></i>
+                                    <span>Add</span>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                    <!--- Product Card --->
+                    <article class="sp-cli-rental-card" data-category="fitness" data-name="Adjustable Dumbbell Set">
+                        <div class="sp-cli-rental-card-image">
+                            <img src="assets/images/rental/dumbbell.webp" alt="Adjustable Dumbbell Set">
+                            <span class="sp-cli-rental-card-tag">New</span>
+                            <button type="button" class="sp-cli-rental-wishlist" aria-label="Add to wishlist">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                        </div>
+                        <div class="sp-cli-rental-card-content">
+                            <span class="sp-cli-rental-card-category">Fitness</span>
+                            <h2>Adjustable Dumbbell Set</h2>
+                            <p>Flexible weight training equipment for effective home or gym workouts.</p>
+                            <div class="sp-cli-rental-card-meta">
+                                <span><i class="bi bi-star-fill"></i> 4.8</span>
+                                <span><i class="bi bi-box"></i> Available</span>
+                            </div>
+                            <div class="sp-cli-rental-card-bottom">
+                                <div class="sp-cli-rental-price">
+                                    <strong>₹350</strong>
+                                    <span>/ day</span>
+                                </div>
+                                <button type="button" class="sp-cli-rental-add-cart"
+                                    data-product="Adjustable Dumbbell Set">
+                                    <i class="bi bi-bag-plus"></i>
+                                    <span>Add</span>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                    <!--- Product Card --->
+                    <article class="sp-cli-rental-card" data-category="tennis" data-name="Professional Tennis Racket">
+                        <div class="sp-cli-rental-card-image">
+                            <img src="assets/images/rental/tennis.webp" alt="Professional Tennis Racket">
+                            <button type="button" class="sp-cli-rental-wishlist" aria-label="Add to wishlist">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                        </div>
+                        <div class="sp-cli-rental-card-content">
+                            <span class="sp-cli-rental-card-category">Tennis</span>
+                            <h2>Professional Tennis Racket</h2>
+                            <p>High-performance racket built for control, speed and consistent shots.</p>
+                            <div class="sp-cli-rental-card-meta">
+                                <span><i class="bi bi-star-fill"></i> 4.9</span>
+                                <span><i class="bi bi-box"></i> Available</span>
+                            </div>
+                            <div class="sp-cli-rental-card-bottom">
+                                <div class="sp-cli-rental-price">
+                                    <strong>₹250</strong>
+                                    <span>/ day</span>
+                                </div>
+                                <button type="button" class="sp-cli-rental-add-cart"
+                                    data-product="Professional Tennis Racket">
+                                    <i class="bi bi-bag-plus"></i>
+                                    <span>Add</span>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                    <!--- Product Card --->
+                    <article class="sp-cli-rental-card" data-category="cricket" data-name="Complete Cricket Kit">
+                        <div class="sp-cli-rental-card-image">
+                            <img src="assets/images/rental/cricket-kit.webp" alt="Complete Cricket Kit">
+                            <button type="button" class="sp-cli-rental-wishlist" aria-label="Add to wishlist">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                        </div>
+                        <div class="sp-cli-rental-card-content">
+                            <span class="sp-cli-rental-card-category">Cricket</span>
+                            <h2>Complete Cricket Kit</h2>
+                            <p>Everything you need for a complete cricket session in one equipment kit.</p>
+                            <div class="sp-cli-rental-card-meta">
+                                <span><i class="bi bi-star-fill"></i> 4.8</span>
+                                <span><i class="bi bi-box"></i> Available</span>
+                            </div>
+                            <div class="sp-cli-rental-card-bottom">
+                                <div class="sp-cli-rental-price">
+                                    <strong>₹600</strong>
+                                    <span>/ day</span>
+                                </div>
+                                <button type="button" class="sp-cli-rental-add-cart"
+                                    data-product="Complete Cricket Kit">
+                                    <i class="bi bi-bag-plus"></i>
+                                    <span>Add</span>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                    <!--- Product Card --->
+                    <article class="sp-cli-rental-card" data-category="cricket" data-name="Professional Cricket Bat">
+                        <div class="sp-cli-rental-card-image">
+                            <img src="assets/images/rental/cricket.webp" alt="Professional Cricket Bat">
+                            <button type="button" class="sp-cli-rental-wishlist" aria-label="Add to wishlist">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                        </div>
+                        <div class="sp-cli-rental-card-content">
+                            <span class="sp-cli-rental-card-category">Cricket</span>
+                            <h2>Professional Cricket Bat</h2>
+                            <p>Premium quality cricket bat designed for powerful shots and confident match performance.
+                            </p>
+                            <div class="sp-cli-rental-card-meta">
+                                <span><i class="bi bi-star-fill"></i> 4.9</span>
+                                <span><i class="bi bi-box"></i> Available</span>
+                            </div>
+                            <div class="sp-cli-rental-card-bottom">
+                                <div class="sp-cli-rental-price">
+                                    <strong>₹350</strong>
+                                    <span>/ day</span>
+                                </div>
+                                <button type="button" class="sp-cli-rental-add-cart"
+                                    data-product="Professional Cricket Bat">
+                                    <i class="bi bi-bag-plus"></i>
+                                    <span>Add</span>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                    <!--- Product Card --->
+                    <article class="sp-cli-rental-card" data-category="football"
+                        data-name="Football Training Cones Set">
+                        <div class="sp-cli-rental-card-image">
+                            <img src="assets/images/rental/cones.webp" alt="Football Training Cones Set">
+                            <button type="button" class="sp-cli-rental-wishlist" aria-label="Add to wishlist">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                        </div>
+                        <div class="sp-cli-rental-card-content">
+                            <span class="sp-cli-rental-card-category">Football</span>
+                            <h2>Football Training Cones Set</h2>
+                            <p>Perfect training cones set for drills, speed training and practice sessions.</p>
+                            <div class="sp-cli-rental-card-meta">
+                                <span><i class="bi bi-star-fill"></i> 4.6</span>
+                                <span><i class="bi bi-box"></i> Available</span>
+                            </div>
+                            <div class="sp-cli-rental-card-bottom">
+                                <div class="sp-cli-rental-price">
+                                    <strong>₹100</strong>
+                                    <span>/ day</span>
+                                </div>
+                                <button type="button" class="sp-cli-rental-add-cart"
+                                    data-product="Football Training Cones Set">
+                                    <i class="bi bi-bag-plus"></i>
+                                    <span>Add</span>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <!--- Empty State --->
+                <div class="sp-cli-rental-empty" id="spCliRentalEmpty">
+                    <i class="bi bi-search"></i>
+                    <h2>No Equipment Found</h2>
+                    <p>Try searching for something else or select another category.</p>
+                </div>
+            </section>
+
+
+        </div>
+    </div>
+
+    <!--- Js Files --->
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+    <!-- Page JS -->
+    <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/client-rental.js"></script>
+</body>
+
+</html>

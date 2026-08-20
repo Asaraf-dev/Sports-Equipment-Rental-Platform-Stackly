@@ -1,0 +1,339 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sports Equipment | Dashboard </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Main favicon -->
+    <link rel="icon" href="favicon.ico" />
+    <!-- webp favicons -->
+    <link rel="icon" type="image/webp" sizes="16x16" href="assets/images/favicon-16x16.png" />
+    <link rel="icon" type="image/webp" sizes="32x32" href="assets/images/favicon-32x32.png" />
+    <!-- Apple -->
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
+    <!-- Android -->
+    <link rel="icon" type="image/webp" sizes="192x192" href="assets/images/android-chrome-192x192.png" />
+    <link rel="icon" type="image/webp" sizes="512x512" href="assets/images/android-chrome-512x512.png" />
+    <!-- Manifest -->
+    <link rel="manifest" href="assets/images/site.webmanifest" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!--- Bootstrap Icon --->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="assets/css/global.css" />
+    <link rel="stylesheet" href="assets/css/dashboard.css" />
+</head>
+
+<body>
+
+    <!--- Dashboard --->
+    <div class="sp-dash-layout">
+        <!--- Sidebar Overlay --->
+        <div class="sp-dash-overlay"></div>
+        <!--- Sidebar --->
+        <aside class="sp-dash-sidebar">
+            <!--- Sidebar Header --->
+            <div class="sp-dash-sidebar-header">
+                <a href="index.html" class="sp-dash-logo">
+                    <span class="sp-dash-logo-mark">
+                        <i class="bi bi-trophy-fill"></i>
+                    </span>
+                    <span class="sp-dash-logo-text">SPORT<span>RENT</span></span>
+                </a>
+                <button type="button" class="sp-dash-sidebar-close" aria-label="Close sidebar">
+                    <i class="bi bi-x-lg"></i>
+                </button>
+            </div>
+            <!--- Mobile User Email --->
+            <div class="sp-dash-sidebar-user">
+                <div class="sp-dash-sidebar-user-icon">
+                    <i class="bi bi-person"></i>
+                </div>
+                <div class="sp-dash-sidebar-user-content">
+                    <span>LOGGED IN AS</span>
+                    <strong class="sp-dash-sidebar-email">user@email.com</strong>
+                </div>
+            </div>
+            <!--- Sidebar Navigation --->
+            <nav class="sp-dash-sidebar-nav">
+                <a href="client-dashboard.html" class="sp-dash-nav-link">
+                    <span class="sp-dash-nav-icon">
+                        <i class="bi bi-grid-1x2"></i>
+                    </span>
+                    <span>Dashboard</span>
+                </a>
+                <a href="client-rental.html" class="sp-dash-nav-link">
+                    <span class="sp-dash-nav-icon">
+                        <i class="bi bi-box-seam"></i>
+                    </span>
+                    <span>Rental</span>
+                </a>
+                <a href="client-cart.html" class="sp-dash-nav-link">
+                    <span class="sp-dash-nav-icon">
+                        <i class="bi bi-bag"></i>
+                    </span>
+                    <span>Cart</span>
+                </a>
+                <a href="client-profile.html" class="sp-dash-nav-link">
+                    <span class="sp-dash-nav-icon">
+                        <i class="bi bi-person-circle"></i>
+                    </span>
+                    <span>Profile</span>
+                </a>
+                <button type="button" class="sp-dash-nav-link sp-dash-logout">
+                    <span class="sp-dash-nav-icon">
+                        <i class="bi bi-box-arrow-right"></i>
+                    </span>
+                    <span>Logout</span>
+                </button>
+            </nav>
+            <!--- Sidebar Bottom --->
+            <div class="sp-dash-sidebar-bottom">
+                <span class="sp-dash-sidebar-status"></span>
+                <span>SportRent Platform</span>
+            </div>
+        </aside>
+        <!--- Main Area --->
+        <div class="sp-dash-main">
+            <!--- Topbar --->
+            <header class="sp-dash-topbar">
+                <div class="sp-dash-topbar-left">
+                    <button type="button" class="sp-dash-menu-toggle" aria-label="Open menu" aria-expanded="false">
+                        <i class="bi bi-three-dots"></i>
+                    </button>
+                    <div class="sp-dash-page-title">
+
+                        <h1>client Dashboard</h1>
+                    </div>
+                </div>
+                <div class="sp-dash-topbar-right">
+                    <div class="sp-dash-topbar-user">
+                        <div class="sp-dash-topbar-user-content">
+                            <span>WELCOME BACK</span>
+                            <strong class="sp-dash-topbar-email">user@email.com</strong>
+                        </div>
+                        <div class="sp-dash-profile-image" title="Profile">
+                            <span class="sp-dash-profile-initials">SR</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+
+            <!--- Dashboard Content --->
+            <!--- Client Cart --->
+            <main class="sp-cli-cart">
+                <!--- Page Header --->
+                <section class="sp-cli-cart-header">
+                    <div>
+                        <span class="sp-cli-cart-label"><i class="bi bi-bag-check"></i> RENTAL CART</span>
+                        <h1>Your <span>Rental Cart.</span></h1>
+                        <p>Review your selected sports equipment and get ready for your next game.</p>
+                    </div>
+                    <a href="client-rental.html" class="sp-cli-cart-continue">
+                        <i class="bi bi-arrow-left"></i>
+                        <span>Continue Renting</span>
+                    </a>
+                </section>
+                <!--- Cart Layout --->
+                <div class="sp-cli-cart-layout">
+                    <!--- Cart Products --->
+                    <section class="sp-cli-cart-products">
+                        <div class="sp-cli-cart-products-header">
+                            <div>
+                                <h2>Selected Equipment</h2>
+                                <p><span id="spCliCartItemCount">3</span> items in your cart</p>
+                            </div>
+                            <button type="button" class="sp-cli-cart-clear" id="spCliCartClear">
+                                <i class="bi bi-trash3"></i>
+                                <span>Clear Cart</span>
+                            </button>
+                        </div>
+                        <!--- Cart Items --->
+                        <div class="sp-cli-cart-items" id="spCliCartItems">
+                            <!--- Cart Item --->
+                            <article class="sp-cli-cart-item" data-price="600" data-deposit="500">
+                                <div class="sp-cli-cart-item-image">
+                                    <img src="assets/images/rental/cricket-kit.webp" alt="Complete Cricket Kit">
+                                </div>
+                                <div class="sp-cli-cart-item-content">
+                                    <span class="sp-cli-cart-item-category">Cricket</span>
+                                    <h3>Complete Cricket Kit</h3>
+                                    <p>Complete equipment kit for your cricket session.</p>
+                                    <div class="sp-cli-cart-item-mobile-price">
+                                        <strong>₹600</strong>
+                                        <span>/ day</span>
+                                    </div>
+                                </div>
+                                <div class="sp-cli-cart-item-price">
+                                    <strong>₹600</strong>
+                                    <span>/ day</span>
+                                </div>
+                                <div class="sp-cli-cart-quantity">
+                                    <button type="button" class="sp-cli-cart-quantity-btn sp-cli-cart-decrease"
+                                        aria-label="Decrease quantity">
+                                        <i class="bi bi-dash"></i>
+                                    </button>
+                                    <span class="sp-cli-cart-quantity-value">1</span>
+                                    <button type="button" class="sp-cli-cart-quantity-btn sp-cli-cart-increase"
+                                        aria-label="Increase quantity">
+                                        <i class="bi bi-plus"></i>
+                                    </button>
+                                </div>
+                                <div class="sp-cli-cart-item-total">
+                                    <strong>₹600</strong>
+                                    <span>Total</span>
+                                </div>
+                                <button type="button" class="sp-cli-cart-remove"
+                                    aria-label="Remove Complete Cricket Kit">
+                                    <i class="bi bi-trash3"></i>
+                                </button>
+                            </article>
+                            <!--- Cart Item --->
+                            <article class="sp-cli-cart-item" data-price="350" data-deposit="300">
+                                <div class="sp-cli-cart-item-image">
+                                    <img src="assets/images/rental/cricket-bat.webp" alt="Professional Cricket Bat">
+                                </div>
+                                <div class="sp-cli-cart-item-content">
+                                    <span class="sp-cli-cart-item-category">Cricket</span>
+                                    <h3>Professional Cricket Bat</h3>
+                                    <p>Premium cricket bat built for confident match performance.</p>
+                                    <div class="sp-cli-cart-item-mobile-price">
+                                        <strong>₹350</strong>
+                                        <span>/ day</span>
+                                    </div>
+                                </div>
+                                <div class="sp-cli-cart-item-price">
+                                    <strong>₹350</strong>
+                                    <span>/ day</span>
+                                </div>
+                                <div class="sp-cli-cart-quantity">
+                                    <button type="button" class="sp-cli-cart-quantity-btn sp-cli-cart-decrease"
+                                        aria-label="Decrease quantity">
+                                        <i class="bi bi-dash"></i>
+                                    </button>
+                                    <span class="sp-cli-cart-quantity-value">1</span>
+                                    <button type="button" class="sp-cli-cart-quantity-btn sp-cli-cart-increase"
+                                        aria-label="Increase quantity">
+                                        <i class="bi bi-plus"></i>
+                                    </button>
+                                </div>
+                                <div class="sp-cli-cart-item-total">
+                                    <strong>₹350</strong>
+                                    <span>Total</span>
+                                </div>
+                                <button type="button" class="sp-cli-cart-remove"
+                                    aria-label="Remove Professional Cricket Bat">
+                                    <i class="bi bi-trash3"></i>
+                                </button>
+                            </article>
+                            <!--- Cart Item --->
+                            <article class="sp-cli-cart-item" data-price="450" data-deposit="400">
+                                <div class="sp-cli-cart-item-image">
+                                    <img src="assets/images/rental/football.webp" alt="Football Training Kit">
+                                </div>
+                                <div class="sp-cli-cart-item-content">
+                                    <span class="sp-cli-cart-item-category">Football</span>
+                                    <h3>Football Training Kit</h3>
+                                    <p>Essential equipment for training sessions and friendly matches.</p>
+                                    <div class="sp-cli-cart-item-mobile-price">
+                                        <strong>₹450</strong>
+                                        <span>/ day</span>
+                                    </div>
+                                </div>
+                                <div class="sp-cli-cart-item-price">
+                                    <strong>₹450</strong>
+                                    <span>/ day</span>
+                                </div>
+                                <div class="sp-cli-cart-quantity">
+                                    <button type="button" class="sp-cli-cart-quantity-btn sp-cli-cart-decrease"
+                                        aria-label="Decrease quantity">
+                                        <i class="bi bi-dash"></i>
+                                    </button>
+                                    <span class="sp-cli-cart-quantity-value">1</span>
+                                    <button type="button" class="sp-cli-cart-quantity-btn sp-cli-cart-increase"
+                                        aria-label="Increase quantity">
+                                        <i class="bi bi-plus"></i>
+                                    </button>
+                                </div>
+                                <div class="sp-cli-cart-item-total">
+                                    <strong>₹450</strong>
+                                    <span>Total</span>
+                                </div>
+                                <button type="button" class="sp-cli-cart-remove"
+                                    aria-label="Remove Football Training Kit">
+                                    <i class="bi bi-trash3"></i>
+                                </button>
+                            </article>
+                        </div>
+                        <!--- Empty Cart --->
+                        <div class="sp-cli-cart-empty" id="spCliCartEmpty" hidden>
+                            <div class="sp-cli-cart-empty-icon">
+                                <i class="bi bi-bag-x"></i>
+                            </div>
+                            <h2>Your Cart Is Empty</h2>
+                            <p>You have not added any sports equipment to your rental cart yet.</p>
+                            <a href="client-rental.html" class="sp-cli-cart-empty-btn">
+                                <span>Explore Equipment</span>
+                                <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </section>
+                    <!--- Order Summary --->
+                    <aside class="sp-cli-cart-summary">
+                        <div class="sp-cli-cart-summary-top">
+                            <span class="sp-cli-cart-label"><i class="bi bi-receipt"></i> ORDER SUMMARY</span>
+                            <h2>Rental Summary</h2>
+                        </div>
+                        <div class="sp-cli-cart-summary-row">
+                            <span>Equipment Rental</span>
+                            <strong id="spCliCartSubtotal">₹1,400</strong>
+                        </div>
+                        <div class="sp-cli-cart-summary-row">
+                            <span>Security Deposit</span>
+                            <strong id="spCliCartDeposit">₹1,200</strong>
+                        </div>
+                        <div class="sp-cli-cart-summary-divider"></div>
+                        <div class="sp-cli-cart-summary-total">
+                            <span>Total Payable</span>
+                            <strong id="spCliCartTotal">₹2,600</strong>
+                        </div>
+                        <p class="sp-cli-cart-summary-note">
+                            <i class="bi bi-info-circle"></i>
+                            Security deposit will be refunded after the equipment is returned in good condition.
+                        </p>
+                        <button type="button" class="sp-cli-cart-checkout" id="spCliCartCheckout">
+                            <span>Proceed To Checkout</span>
+                            <i class="bi bi-arrow-right"></i>
+                        </button>
+                        <div class="sp-cli-cart-secure">
+                            <i class="bi bi-shield-check"></i>
+                            <span>Secure rental process</span>
+                        </div>
+                    </aside>
+                </div>
+            </main>
+
+
+        </div>
+    </div>
+
+    <!--- Js Files --->
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+    <!-- Page JS -->
+    <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/client-cart.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,187 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sports Equipment | Login </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Main favicon -->
+    <link rel="icon" href="favicon.ico" />
+    <!-- webp favicons -->
+    <link rel="icon" type="image/webp" sizes="16x16" href="assets/images/favicon-16x16.png" />
+    <link rel="icon" type="image/webp" sizes="32x32" href="assets/images/favicon-32x32.png" />
+    <!-- Apple -->
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
+    <!-- Android -->
+    <link rel="icon" type="image/webp" sizes="192x192" href="assets/images/android-chrome-192x192.png" />
+    <link rel="icon" type="image/webp" sizes="512x512" href="assets/images/android-chrome-512x512.png" />
+    <!-- Manifest -->
+    <link rel="manifest" href="assets/images/site.webmanifest" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!--- Bootstrap Icon --->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="assets/css/global.css" />
+    <link rel="stylesheet" href="assets/css/auth.css" />
+</head>
+
+<body>
+
+    <!--- Login Page --->
+    <section class="sp-log-page">
+        <div class="container">
+            <div class="sp-log-wrapper">
+                <!--- Login Brand Panel --->
+                <div class="sp-log-brand">
+                    <a href="index.html" class="sp-log-logo">
+                        <span class="sp-log-logo-mark">
+                            <i class="bi bi-trophy-fill"></i>
+                        </span>
+                        <span class="sp-log-logo-text">SPORT<span>RENT</span></span>
+                    </a>
+                    <div class="sp-log-brand-content">
+                        <span class="sp-log-label">
+                            <i class="bi bi-lightning-charge-fill"></i>
+                            SPORT WITHOUT LIMITS
+                        </span>
+                        <h1>Ready To<br><span>Play More?</span></h1>
+                        <p>Access premium sports equipment, manage your rentals and get ready for your next game.</p>
+                    </div>
+                    <div class="sp-log-brand-stats">
+                        <div class="sp-log-brand-stat">
+                            <strong>500+</strong>
+                            <span>Equipment</span>
+                        </div>
+                        <div class="sp-log-brand-stat">
+                            <strong>20+</strong>
+                            <span>Sports</span>
+                        </div>
+                        <div class="sp-log-brand-stat">
+                            <strong>24/7</strong>
+                            <span>Support</span>
+                        </div>
+                    </div>
+                    <div class="sp-log-brand-shape sp-log-brand-shape-one"></div>
+                    <div class="sp-log-brand-shape sp-log-brand-shape-two"></div>
+                </div>
+                <!--- Login Form Panel --->
+                <div class="sp-log-form-panel">
+                    <div class="sp-log-form-container">
+                        <!--- Form Heading --->
+                        <div class="sp-log-form-heading">
+                            <div class="sp-log-mobile-logo-wrapper">
+                                <a href="index.html" class="sp-log-mobile-logo">
+                                    <span class="sp-log-logo-mark">
+                                        <i class="bi bi-trophy-fill"></i>
+                                    </span>
+                                    <span class="sp-log-logo-text">SPORT<span>RENT</span></span>
+                                </a>
+                            </div>
+                            <span class="sp-log-form-kicker">WELCOME BACK</span>
+                            <h2>Sign In To SportRent.</h2>
+                            <p>Select your account type and enter your details to continue.</p>
+                        </div>
+                        <!--- Login Form --->
+                        <form class="sp-log-form" id="spLogForm">
+                            <!--- Account Type --->
+                            <div class="sp-log-field">
+                                <label>LOGIN AS</label>
+                                <div class="sp-log-role-selector">
+                                    <label class="sp-log-role-option">
+                                        <input type="radio" name="accountType" value="client" checked required>
+                                        <span class="sp-log-role-card">
+                                            <span class="sp-log-role-icon">
+                                                <i class="bi bi-person"></i>
+                                            </span>
+                                            <span>
+                                                <strong>Client</strong>
+                                                <small>Rent & manage gear</small>
+                                            </span>
+                                        </span>
+                                    </label>
+                                    <label class="sp-log-role-option">
+                                        <input type="radio" name="accountType" value="admin" required>
+                                        <span class="sp-log-role-card">
+                                            <span class="sp-log-role-icon">
+                                                <i class="bi bi-shield-check"></i>
+                                            </span>
+                                            <span>
+                                                <strong>Admin</strong>
+                                                <small>Manage platform</small>
+                                            </span>
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                            <!--- Email Field --->
+                            <div class="sp-log-field">
+                                <label for="spLogEmail">EMAIL ADDRESS</label>
+                                <div class="sp-log-input-wrapper">
+                                    <i class="bi bi-envelope sp-log-input-icon"></i>
+                                    <input type="email" id="spLogEmail" class="sp-log-input"
+                                        placeholder="Enter your email address" required autocomplete="email">
+                                </div>
+                            </div>
+                            <!--- Password Field --->
+                            <div class="sp-log-field">
+                                <label for="spLogPassword">PASSWORD</label>
+                                <div class="sp-log-input-wrapper">
+                                    <i class="bi bi-lock sp-log-input-icon"></i>
+                                    <input type="password" id="spLogPassword" class="sp-log-input sp-log-password-input"
+                                        placeholder="Enter your password" required autocomplete="current-password">
+                                    <button type="button" class="sp-log-password-toggle" id="spLogPasswordToggle"
+                                        aria-label="Show password">
+                                        <i class="bi bi-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <!--- Remember And Forgot Password --->
+                            <div class="sp-log-options">
+                                <label class="sp-log-remember">
+                                    <input type="checkbox" id="spLogRemember">
+                                    <span class="sp-log-custom-check">
+                                        <i class="bi bi-check"></i>
+                                    </span>
+                                    <span>Remember me</span>
+                                </label>
+                                <a href="404.html" class="sp-log-forgot">Forgot password?</a>
+                            </div>
+                            <!--- Login Button --->
+                            <button type="submit" class="sp-log-submit">
+                                <span>Login To Your Account</span>
+                                <i class="bi bi-arrow-right"></i>
+                            </button>
+                        </form>
+                        <!--- Register Link --->
+                        <div class="sp-log-register">
+                            <p>Don't have an account? <a href="register.html">sign Up <i
+                                        class="bi bi-arrow-up-right"></i></a></p>
+                        </div>
+                        <!--- Back Home --->
+                        <a href="index.html" class="sp-log-back">
+                            <i class="bi bi-arrow-left"></i>
+                            Back to Home
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--- Js Files --->
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+    <!-- Page JS -->
+    <script src="assets/js/auth.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,609 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sports Equipment | Dashboard </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Main favicon -->
+    <link rel="icon" href="favicon.ico" />
+    <!-- webp favicons -->
+    <link rel="icon" type="image/webp" sizes="16x16" href="assets/images/favicon-16x16.png" />
+    <link rel="icon" type="image/webp" sizes="32x32" href="assets/images/favicon-32x32.png" />
+    <!-- Apple -->
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
+    <!-- Android -->
+    <link rel="icon" type="image/webp" sizes="192x192" href="assets/images/android-chrome-192x192.png" />
+    <link rel="icon" type="image/webp" sizes="512x512" href="assets/images/android-chrome-512x512.png" />
+    <!-- Manifest -->
+    <link rel="manifest" href="assets/images/site.webmanifest" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!--- Bootstrap Icon --->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="assets/css/global.css" />
+    <link rel="stylesheet" href="assets/css/dashboard.css" />
+</head>
+
+<body>
+
+    <!--- Dashboard --->
+    <div class="sp-dash-layout">
+        <!--- Sidebar Overlay --->
+        <div class="sp-dash-overlay"></div>
+        <!--- Sidebar --->
+        <aside class="sp-dash-sidebar">
+            <!--- Sidebar Header --->
+            <div class="sp-dash-sidebar-header">
+                <a href="index.html" class="sp-dash-logo">
+                    <span class="sp-dash-logo-mark">
+                        <i class="bi bi-trophy-fill"></i>
+                    </span>
+                    <span class="sp-dash-logo-text">SPORT<span>RENT</span></span>
+                </a>
+                <button type="button" class="sp-dash-sidebar-close" aria-label="Close sidebar">
+                    <i class="bi bi-x-lg"></i>
+                </button>
+            </div>
+            <!--- Mobile User Email --->
+            <div class="sp-dash-sidebar-user">
+                <div class="sp-dash-sidebar-user-icon">
+                    <i class="bi bi-person"></i>
+                </div>
+                <div class="sp-dash-sidebar-user-content">
+                    <span>LOGGED IN AS</span>
+                    <strong class="sp-dash-sidebar-email">user@email.com</strong>
+                </div>
+            </div>
+            <!--- Sidebar Navigation --->
+            <nav class="sp-dash-sidebar-nav">
+                <a href="admin-dashboard.html" class="sp-dash-nav-link">
+                    <span class="sp-dash-nav-icon">
+                        <i class="bi bi-grid-1x2"></i>
+                    </span>
+                    <span>Dashboard</span>
+                </a>
+                <a href="admin-rental.html" class="sp-dash-nav-link">
+                    <span class="sp-dash-nav-icon">
+                        <i class="bi bi-box-seam"></i>
+                    </span>
+                    <span>Add Products</span>
+                </a>
+                <a href="admin-users.html" class="sp-dash-nav-link">
+                    <span class="sp-dash-nav-icon">
+                        <i class="bi bi-people"></i>
+                    </span>
+                    <span>Users</span>
+                </a>
+                <a href="admin-profile.html" class="sp-dash-nav-link">
+                    <span class="sp-dash-nav-icon">
+                        <i class="bi bi-person-circle"></i>
+                    </span>
+                    <span>Profile</span>
+                </a>
+                <button type="button" class="sp-dash-nav-link sp-dash-logout">
+                    <span class="sp-dash-nav-icon">
+                        <i class="bi bi-box-arrow-right"></i>
+                    </span>
+                    <span>Logout</span>
+                </button>
+            </nav>
+            <!--- Sidebar Bottom --->
+            <div class="sp-dash-sidebar-bottom">
+                <span class="sp-dash-sidebar-status"></span>
+                <span>SportRent Platform</span>
+            </div>
+        </aside>
+        <!--- Main Area --->
+        <div class="sp-dash-main">
+            <!--- Topbar --->
+            <header class="sp-dash-topbar">
+                <div class="sp-dash-topbar-left">
+                    <button type="button" class="sp-dash-menu-toggle" aria-label="Open menu" aria-expanded="false">
+                        <i class="bi bi-three-dots"></i>
+                    </button>
+                    <div class="sp-dash-page-title">
+                     
+                        <h1>Admin Dashboard</h1>
+                    </div>
+                </div>
+                <div class="sp-dash-topbar-right">
+                    <div class="sp-dash-topbar-user">
+                        <div class="sp-dash-topbar-user-content">
+                            <span>WELCOME BACK</span>
+                            <strong class="sp-dash-topbar-email">user@email.com</strong>
+                        </div>
+                        <div class="sp-dash-profile-image" title="Profile">
+                            <span class="sp-dash-profile-initials">SR</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+
+            <!--- Dashboard Content --->
+            <!--- Admin Users --->
+            <section class="sp-adm-users">
+                <!--- Users Header --->
+                <div class="sp-adm-users-header">
+                    <div class="sp-adm-users-header-content">
+                        <div class="sp-adm-users-header-label">
+                            <i class="bi bi-people"></i>
+                            USER MANAGEMENT
+                        </div>
+                        <h2>Manage Users</h2>
+                        <p>Monitor platform members, manage user access and keep your SportRent community organized.</p>
+                    </div>
+                    <button type="button" class="sp-adm-users-add-btn" id="sp-adm-users-add-btn">
+                        <i class="bi bi-person-plus"></i>
+                        <span>Add User</span>
+                    </button>
+                </div>
+                <!--- Users Statistics --->
+                <div class="sp-adm-users-stats">
+                    <div class="sp-adm-users-stat-card">
+                        <div class="sp-adm-users-stat-icon">
+                            <i class="bi bi-people"></i>
+                        </div>
+                        <div class="sp-adm-users-stat-content">
+                            <span>Total Users</span>
+                            <strong>248</strong>
+                            <small><i class="bi bi-arrow-up-right"></i> 12.5% this month</small>
+                        </div>
+                    </div>
+                    <div class="sp-adm-users-stat-card">
+                        <div class="sp-adm-users-stat-icon">
+                            <i class="bi bi-person-workspace"></i>
+                        </div>
+                        <div class="sp-adm-users-stat-content">
+                            <span>Administrators</span>
+                            <strong>08</strong>
+                            <small>Platform managers</small>
+                        </div>
+                    </div>
+                    <div class="sp-adm-users-stat-card">
+                        <div class="sp-adm-users-stat-icon">
+                            <i class="bi bi-person-check"></i>
+                        </div>
+                        <div class="sp-adm-users-stat-content">
+                            <span>Active Clients</span>
+                            <strong>226</strong>
+                            <small><i class="bi bi-arrow-up-right"></i> 18 joined recently</small>
+                        </div>
+                    </div>
+                    <div class="sp-adm-users-stat-card">
+                        <div class="sp-adm-users-stat-icon">
+                            <i class="bi bi-person-plus"></i>
+                        </div>
+                        <div class="sp-adm-users-stat-content">
+                            <span>New This Month</span>
+                            <strong>34</strong>
+                            <small>Growing community</small>
+                        </div>
+                    </div>
+                </div>
+                <!--- Users Management Panel --->
+                <div class="sp-adm-users-panel">
+                    <!--- Users Toolbar --->
+                    <div class="sp-adm-users-toolbar">
+                        <div class="sp-adm-users-search">
+                            <i class="bi bi-search"></i>
+                            <input type="search" id="sp-adm-users-search-input"
+                                placeholder="Search name, email or phone...">
+                        </div>
+                        <div class="sp-adm-users-toolbar-actions">
+                            <div class="sp-adm-users-filter">
+                                <i class="bi bi-person-badge"></i>
+                                <select id="sp-adm-users-role-filter">
+                                    <option value="all">All Roles</option>
+                                    <option value="admin">Admin</option>
+                                    <option value="client">Client</option>
+                                </select>
+                            </div>
+                            <div class="sp-adm-users-filter">
+                                <i class="bi bi-funnel"></i>
+                                <select id="sp-adm-users-status-filter">
+                                    <option value="all">All Status</option>
+                                    <option value="active">Active</option>
+                                    <option value="inactive">Inactive</option>
+                                </select>
+                            </div>
+                            <button type="button" class="sp-adm-users-refresh-btn" id="sp-adm-users-refresh-btn"
+                                aria-label="Refresh Users">
+                                <i class="bi bi-arrow-clockwise"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <!--- Users Table --->
+                    <div class="sp-adm-users-table-wrap">
+                        <table class="sp-adm-users-table">
+                            <thead>
+                                <tr>
+                                    <th>User</th>
+                                    <th>Role</th>
+                                    <th>Phone</th>
+                                    <th>Joined</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="sp-adm-users-table-body">
+                                <tr data-role="admin" data-status="active">
+                                    <td>
+                                        <div class="sp-adm-users-user">
+                                            <div class="sp-adm-users-avatar">AS</div>
+                                            <div class="sp-adm-users-user-info">
+                                                <strong>Asaraf</strong>
+                                                <span>asaraf@example.com</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span class="sp-adm-users-role sp-adm-users-role-admin">
+                                            <i class="bi bi-shield-check"></i>
+                                            Admin
+                                        </span>
+                                    </td>
+                                    <td>9876543210</td>
+                                    <td>Aug 12, 2026</td>
+                                    <td>
+                                        <span class="sp-adm-users-status active">
+                                            <span></span>
+                                            Active
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <div class="sp-adm-users-actions">
+                                            <a href="404.html"><button type="button" class="sp-adm-users-action-btn sp-adm-users-view-btn"
+                                                aria-label="View User">
+                                                <i class="bi bi-eye"></i>
+                                            </button></a>
+                                            <a href="404.html"><button type="button" class="sp-adm-users-action-btn sp-adm-users-edit-btn"
+                                                aria-label="Edit User">
+                                                <i class="bi bi-pencil"></i>
+                                            </button></a>
+                                            <button type="button"
+                                                class="sp-adm-users-action-btn sp-adm-users-delete-btn"
+                                                aria-label="Delete User">
+                                                <i class="bi bi-trash3"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr data-role="client" data-status="active">
+                                    <td>
+                                        <div class="sp-adm-users-user">
+                                            <div class="sp-adm-users-avatar">RK</div>
+                                            <div class="sp-adm-users-user-info">
+                                                <strong>Rahul Kumar</strong>
+                                                <span>rahul@example.com</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span class="sp-adm-users-role sp-adm-users-role-client">
+                                            <i class="bi bi-person"></i>
+                                            Client
+                                        </span>
+                                    </td>
+                                    <td>9876501234</td>
+                                    <td>Aug 10, 2026</td>
+                                    <td>
+                                        <span class="sp-adm-users-status active">
+                                            <span></span>
+                                            Active
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <div class="sp-adm-users-actions">
+                                            <a href="404.html"><button type="button"
+                                                class="sp-adm-users-action-btn sp-adm-users-view-btn"><i
+                                                    class="bi bi-eye"></i></button></a>
+                                            <a href="404.html"><button type="button"
+                                                class="sp-adm-users-action-btn sp-adm-users-edit-btn"><i
+                                                    class="bi bi-pencil"></i></button></a>
+                                            <button type="button"
+                                                class="sp-adm-users-action-btn sp-adm-users-delete-btn"><i
+                                                    class="bi bi-trash3"></i></button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr data-role="client" data-status="inactive">
+                                    <td>
+                                        <div class="sp-adm-users-user">
+                                            <div class="sp-adm-users-avatar">SM</div>
+                                            <div class="sp-adm-users-user-info">
+                                                <strong>Sanjay Mohan</strong>
+                                                <span>sanjay@example.com</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span class="sp-adm-users-role sp-adm-users-role-client">
+                                            <i class="bi bi-person"></i>
+                                            Client
+                                        </span>
+                                    </td>
+                                    <td>9123456789</td>
+                                    <td>Aug 08, 2026</td>
+                                    <td>
+                                        <span class="sp-adm-users-status inactive">
+                                            <span></span>
+                                            Inactive
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <div class="sp-adm-users-actions">
+                                           <a href="404.html"><button type="button"
+                                                class="sp-adm-users-action-btn sp-adm-users-view-btn"><i
+                                                    class="bi bi-eye"></i></button></a> 
+                                            <a href="404.html"><button type="button"
+                                                class="sp-adm-users-action-btn sp-adm-users-edit-btn"><i
+                                                    class="bi bi-pencil"></i></button></a>
+                                            <button type="button"
+                                                class="sp-adm-users-action-btn sp-adm-users-delete-btn"><i
+                                                    class="bi bi-trash3"></i></button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr data-role="client" data-status="active">
+                                    <td>
+                                        <div class="sp-adm-users-user">
+                                            <div class="sp-adm-users-avatar">PD</div>
+                                            <div class="sp-adm-users-user-info">
+                                                <strong>Priya Devi</strong>
+                                                <span>priya@example.com</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span class="sp-adm-users-role sp-adm-users-role-client">
+                                            <i class="bi bi-person"></i>
+                                            Client
+                                        </span>
+                                    </td>
+                                    <td>9988776655</td>
+                                    <td>Aug 05, 2026</td>
+                                    <td>
+                                        <span class="sp-adm-users-status active">
+                                            <span></span>
+                                            Active
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <div class="sp-adm-users-actions">
+                                            <a href="404.html"><button type="button"
+                                                class="sp-adm-users-action-btn sp-adm-users-view-btn"><i
+                                                    class="bi bi-eye"></i></button></a>
+                                            <a href="404.html"><button type="button"
+                                                class="sp-adm-users-action-btn sp-adm-users-edit-btn"><i
+                                                    class="bi bi-pencil"></i></button></a>
+                                            <button type="button"
+                                                class="sp-adm-users-action-btn sp-adm-users-delete-btn"><i
+                                                    class="bi bi-trash3"></i></button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr data-role="admin" data-status="active">
+                                    <td>
+                                        <div class="sp-adm-users-user">
+                                            <div class="sp-adm-users-avatar">AR</div>
+                                            <div class="sp-adm-users-user-info">
+                                                <strong>Arun Raj</strong>
+                                                <span>arun@example.com</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span class="sp-adm-users-role sp-adm-users-role-admin">
+                                            <i class="bi bi-shield-check"></i>
+                                            Admin
+                                        </span>
+                                    </td>
+                                    <td>9567891230</td>
+                                    <td>Aug 01, 2026</td>
+                                    <td>
+                                        <span class="sp-adm-users-status active">
+                                            <span></span>
+                                            Active
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <div class="sp-adm-users-actions">
+                                           <a href="404.html"> <button type="button"
+                                                class="sp-adm-users-action-btn sp-adm-users-view-btn"><i
+                                                    class="bi bi-eye"></i></button></a>
+                                            <a href="404.html"><button type="button"
+                                                class="sp-adm-users-action-btn sp-adm-users-edit-btn"><i
+                                                    class="bi bi-pencil"></i></button></a>
+                                            <button type="button"
+                                                class="sp-adm-users-action-btn sp-adm-users-delete-btn"><i
+                                                    class="bi bi-trash3"></i></button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!--- Users Mobile Cards --->
+                    <div class="sp-adm-users-mobile-list" id="sp-adm-users-mobile-list">
+                        <div class="sp-adm-users-mobile-card" data-role="admin" data-status="active">
+                            <div class="sp-adm-users-mobile-top">
+                                <div class="sp-adm-users-user">
+                                    <div class="sp-adm-users-avatar">AS</div>
+                                    <div class="sp-adm-users-user-info">
+                                        <strong>Asaraf</strong>
+                                        <span>asaraf@example.com</span>
+                                    </div>
+                                </div>
+                                <span class="sp-adm-users-status active"><span></span>Active</span>
+                            </div>
+                            <div class="sp-adm-users-mobile-details">
+                                <div><span>Role</span><strong>Admin</strong></div>
+                                <div><span>Phone</span><strong>9876543210</strong></div>
+                                <div><span>Joined</span><strong>Aug 12, 2026</strong></div>
+                            </div>
+                            <div class="sp-adm-users-mobile-actions">
+                                <button type="button" class="sp-adm-users-view-btn"><i class="bi bi-eye"></i>
+                                    View</button>
+                                <button type="button" class="sp-adm-users-edit-btn"><i class="bi bi-pencil"></i>
+                                    Edit</button>
+                                <button type="button" class="sp-adm-users-delete-btn"><i
+                                        class="bi bi-trash3"></i></button>
+                            </div>
+                        </div>
+                        <div class="sp-adm-users-mobile-card" data-role="client" data-status="active">
+                            <div class="sp-adm-users-mobile-top">
+                                <div class="sp-adm-users-user">
+                                    <div class="sp-adm-users-avatar">RK</div>
+                                    <div class="sp-adm-users-user-info">
+                                        <strong>Rahul Kumar</strong>
+                                        <span>rahul@example.com</span>
+                                    </div>
+                                </div>
+                                <span class="sp-adm-users-status active"><span></span>Active</span>
+                            </div>
+                            <div class="sp-adm-users-mobile-details">
+                                <div><span>Role</span><strong>Client</strong></div>
+                                <div><span>Phone</span><strong>9876501234</strong></div>
+                                <div><span>Joined</span><strong>Aug 10, 2026</strong></div>
+                            </div>
+                            <div class="sp-adm-users-mobile-actions">
+                                <button type="button" class="sp-adm-users-view-btn"><i class="bi bi-eye"></i>
+                                    View</button>
+                                <button type="button" class="sp-adm-users-edit-btn"><i class="bi bi-pencil"></i>
+                                    Edit</button>
+                                <button type="button" class="sp-adm-users-delete-btn"><i
+                                        class="bi bi-trash3"></i></button>
+                            </div>
+                        </div>
+                        <div class="sp-adm-users-mobile-card" data-role="client" data-status="inactive">
+                            <div class="sp-adm-users-mobile-top">
+                                <div class="sp-adm-users-user">
+                                    <div class="sp-adm-users-avatar">SM</div>
+                                    <div class="sp-adm-users-user-info">
+                                        <strong>Sanjay Mohan</strong>
+                                        <span>sanjay@example.com</span>
+                                    </div>
+                                </div>
+                                <span class="sp-adm-users-status inactive"><span></span>Inactive</span>
+                            </div>
+                            <div class="sp-adm-users-mobile-details">
+                                <div><span>Role</span><strong>Client</strong></div>
+                                <div><span>Phone</span><strong>9123456789</strong></div>
+                                <div><span>Joined</span><strong>Aug 08, 2026</strong></div>
+                            </div>
+                            <div class="sp-adm-users-mobile-actions">
+                                <button type="button" class="sp-adm-users-view-btn"><i class="bi bi-eye"></i>
+                                    View</button>
+                                <button type="button" class="sp-adm-users-edit-btn"><i class="bi bi-pencil"></i>
+                                    Edit</button>
+                                <button type="button" class="sp-adm-users-delete-btn"><i
+                                        class="bi bi-trash3"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--- Users Pagination --->
+                    <div class="sp-adm-users-pagination">
+                        <span>Showing <strong id="sp-adm-users-visible-count">5</strong> of <strong>248</strong>
+                            users</span>
+                        <div class="sp-adm-users-pagination-buttons">
+                            <button type="button" disabled>
+                                <i class="bi bi-chevron-left"></i>
+                            </button>
+                            <button type="button" class="active">1</button>
+                            <a href="404.html"><button type="button">2</button></a>
+                           <a href="404.html"> <button type="button">3</button></a>
+                            <span>...</span>
+                            <a href="404.html"><button type="button">25</button></a>
+                            <a href="404.html"><button type="button"><i class="bi bi-chevron-right"></i></button></a>
+                        </div>
+                    </div>
+                </div>
+                <!--- Add User Modal --->
+                <div class="sp-adm-users-modal" id="sp-adm-users-modal">
+                    <div class="sp-adm-users-modal-overlay"></div>
+                    <div class="sp-adm-users-modal-box">
+                        <div class="sp-adm-users-modal-header">
+                            <div>
+                                <span>NEW PLATFORM USER</span>
+                                <h3>Add New User</h3>
+                            </div>
+                            <button type="button" class="sp-adm-users-modal-close">
+                                <i class="bi bi-x-lg"></i>
+                            </button>
+                        </div>
+                        <form id="sp-adm-users-form">
+                            <div class="sp-adm-users-modal-grid">
+                                <div class="sp-adm-users-form-field">
+                                    <label for="sp-adm-users-name">Full Name <span>*</span></label>
+                                    <input type="text" id="sp-adm-users-name" pattern="[A-Za-z ]+"
+                                        placeholder="Enter full name" required>
+                                </div>
+                                <div class="sp-adm-users-form-field">
+                                    <label for="sp-adm-users-email">Email Address <span>*</span></label>
+                                    <input type="email" id="sp-adm-users-email" placeholder="Enter email address"
+                                        required>
+                                </div>
+                                <div class="sp-adm-users-form-field">
+                                    <label for="sp-adm-users-phone">Phone Number <span>*</span></label>
+                                    <input type="tel" id="sp-adm-users-phone" inputmode="numeric" pattern="[0-9]{10}"
+                                        minlength="10" maxlength="10" placeholder="10 digit phone number" required>
+                                </div>
+                                <div class="sp-adm-users-form-field">
+                                    <label for="sp-adm-users-role">User Role <span>*</span></label>
+                                    <select id="sp-adm-users-role" required>
+                                        <option value="" selected disabled>Select role</option>
+                                        <option value="admin">Admin</option>
+                                        <option value="client">Client</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="sp-adm-users-modal-actions">
+                                <button type="button" class="sp-adm-users-modal-cancel">Cancel</button>
+                                <button type="submit" class="sp-adm-users-modal-submit">
+                                    <i class="bi bi-person-plus"></i>
+                                    Add User
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!--- Delete Confirmation --->
+                <div class="sp-adm-users-delete-modal" id="sp-adm-users-delete-modal">
+                    <div class="sp-adm-users-delete-overlay"></div>
+                    <div class="sp-adm-users-delete-box">
+                        <div class="sp-adm-users-delete-icon">
+                            <i class="bi bi-trash3"></i>
+                        </div>
+                        <h3>Delete User?</h3>
+                        <p>This action cannot be undone. The selected user will be removed from the platform.</p>
+                        <div class="sp-adm-users-delete-actions">
+                            <button type="button" class="sp-adm-users-delete-cancel">Cancel</button>
+                            <button type="button" class="sp-adm-users-delete-confirm">Delete User</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <!--- Js Files --->
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+    <!-- Page JS -->
+    <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/admin-users.js"></script>
+</body>
+
+</html>

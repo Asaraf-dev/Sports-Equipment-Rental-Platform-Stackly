@@ -1,0 +1,381 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sports Equipment | Dashboard </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Main favicon -->
+    <link rel="icon" href="favicon.ico" />
+    <!-- webp favicons -->
+    <link rel="icon" type="image/webp" sizes="16x16" href="assets/images/favicon-16x16.png" />
+    <link rel="icon" type="image/webp" sizes="32x32" href="assets/images/favicon-32x32.png" />
+    <!-- Apple -->
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
+    <!-- Android -->
+    <link rel="icon" type="image/webp" sizes="192x192" href="assets/images/android-chrome-192x192.png" />
+    <link rel="icon" type="image/webp" sizes="512x512" href="assets/images/android-chrome-512x512.png" />
+    <!-- Manifest -->
+    <link rel="manifest" href="assets/images/site.webmanifest" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!--- Bootstrap Icon --->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="assets/css/global.css" />
+    <link rel="stylesheet" href="assets/css/dashboard.css" />
+</head>
+
+<body>
+
+    <!--- Dashboard --->
+    <div class="sp-dash-layout">
+        <!--- Sidebar Overlay --->
+        <div class="sp-dash-overlay"></div>
+        <!--- Sidebar --->
+        <aside class="sp-dash-sidebar">
+            <!--- Sidebar Header --->
+            <div class="sp-dash-sidebar-header">
+                <a href="index.html" class="sp-dash-logo">
+                    <span class="sp-dash-logo-mark">
+                        <i class="bi bi-trophy-fill"></i>
+                    </span>
+                    <span class="sp-dash-logo-text">SPORT<span>RENT</span></span>
+                </a>
+                <button type="button" class="sp-dash-sidebar-close" aria-label="Close sidebar">
+                    <i class="bi bi-x-lg"></i>
+                </button>
+            </div>
+            <!--- Mobile User Email --->
+            <div class="sp-dash-sidebar-user">
+                <div class="sp-dash-sidebar-user-icon">
+                    <i class="bi bi-person"></i>
+                </div>
+                <div class="sp-dash-sidebar-user-content">
+                    <span>LOGGED IN AS</span>
+                    <strong class="sp-dash-sidebar-email">user@email.com</strong>
+                </div>
+            </div>
+            <!--- Sidebar Navigation --->
+            <nav class="sp-dash-sidebar-nav">
+                <a href="client-dashboard.html" class="sp-dash-nav-link">
+                    <span class="sp-dash-nav-icon">
+                        <i class="bi bi-grid-1x2"></i>
+                    </span>
+                    <span>Dashboard</span>
+                </a>
+                <a href="client-rental.html" class="sp-dash-nav-link">
+                    <span class="sp-dash-nav-icon">
+                        <i class="bi bi-box-seam"></i>
+                    </span>
+                    <span>Rental</span>
+                </a>
+                <a href="client-cart.html" class="sp-dash-nav-link">
+                    <span class="sp-dash-nav-icon">
+                        <i class="bi bi-bag"></i>
+                    </span>
+                    <span>Cart</span>
+                </a>
+                <a href="client-profile.html" class="sp-dash-nav-link">
+                    <span class="sp-dash-nav-icon">
+                        <i class="bi bi-person-circle"></i>
+                    </span>
+                    <span>Profile</span>
+                </a>
+                <button type="button" class="sp-dash-nav-link sp-dash-logout">
+                    <span class="sp-dash-nav-icon">
+                        <i class="bi bi-box-arrow-right"></i>
+                    </span>
+                    <span>Logout</span>
+                </button>
+            </nav>
+            <!--- Sidebar Bottom --->
+            <div class="sp-dash-sidebar-bottom">
+                <span class="sp-dash-sidebar-status"></span>
+                <span>SportRent Platform</span>
+            </div>
+        </aside>
+        <!--- Main Area --->
+        <div class="sp-dash-main">
+            <!--- Topbar --->
+            <header class="sp-dash-topbar">
+                <div class="sp-dash-topbar-left">
+                    <button type="button" class="sp-dash-menu-toggle" aria-label="Open menu" aria-expanded="false">
+                        <i class="bi bi-three-dots"></i>
+                    </button>
+                    <div class="sp-dash-page-title">
+                        
+                        <h1>client Dashboard</h1>
+                    </div>
+                </div>
+                <div class="sp-dash-topbar-right">
+                    <div class="sp-dash-topbar-user">
+                        <div class="sp-dash-topbar-user-content">
+                            <span>WELCOME BACK</span>
+                            <strong class="sp-dash-topbar-email">user@email.com</strong>
+                        </div>
+                        <div class="sp-dash-profile-image" title="Profile">
+                            <span class="sp-dash-profile-initials">SR</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+
+            <!--- Dashboard Content --->
+            <!--- Client Overview --->
+            <section class="sp-cli-overview">
+                <!--- Page Header --->
+                <div class="sp-cli-overview-heading">
+                    <div class="sp-cli-overview-heading-content">
+                        <span class="sp-cli-overview-eyebrow">
+                            <i class="bi bi-grid-1x2"></i>
+                            Client Dashboard
+                        </span>
+                        <h1>Welcome Back, <span id="spCliOverviewUserName">Player</span></h1>
+                        <p>Manage your rentals, track your equipment and get ready for your next game.</p>
+                    </div>
+                    <a href="client-rental.html" class="sp-cli-overview-rental-btn">
+                        <span>Explore Equipment</span>
+                        <i class="bi bi-arrow-up-right"></i>
+                    </a>
+                </div>
+                <!--- Quick Stats --->
+                <div class="sp-cli-overview-stats">
+                    <div class="sp-cli-overview-stat-card">
+                        <div class="sp-cli-overview-stat-icon">
+                            <i class="bi bi-box-seam"></i>
+                        </div>
+                        <div class="sp-cli-overview-stat-content">
+                            <span>Active Rentals</span>
+                            <strong >2</strong>
+                            <small><i class="bi bi-clock"></i> Currently rented</small>
+                        </div>
+                    </div>
+                    <div class="sp-cli-overview-stat-card">
+                        <div class="sp-cli-overview-stat-icon">
+                            <i class="bi bi-bag"></i>
+                        </div>
+                        <div class="sp-cli-overview-stat-content">
+                            <span>Cart Items</span>
+                            <strong id="spCliOverviewCartItems">0</strong>
+                            <small><i class="bi bi-plus-circle"></i> Ready to rent</small>
+                        </div>
+                    </div>
+                    <div class="sp-cli-overview-stat-card">
+                        <div class="sp-cli-overview-stat-icon">
+                            <i class="bi bi-check2-circle"></i>
+                        </div>
+                        <div class="sp-cli-overview-stat-content">
+                            <span>Completed Rentals</span>
+                            <strong >2</strong>
+                            <small><i class="bi bi-trophy"></i> Keep playing</small>
+                        </div>
+                    </div>
+                    <div class="sp-cli-overview-stat-card">
+                        <div class="sp-cli-overview-stat-icon">
+                            <i class="bi bi-calendar-event"></i>
+                        </div>
+                        <div class="sp-cli-overview-stat-content">
+                            <span>Next Return</span>
+                            <strong >08/02/26</strong>
+                            <small><i class="bi bi-arrow-repeat"></i> Check rental details</small>
+                        </div>
+                    </div>
+                </div>
+                <!--- Dashboard Grid --->
+                <div class="sp-cli-overview-grid">
+                    <!--- Active Rentals --->
+                    <!--- Active Rentals --->
+                    <div class="sp-cli-overview-rentals-list" id="spCliOverviewRentalsList">
+                        <!--- Rental Item --->
+                        <div class="sp-cli-overview-rental-item">
+                            <div class="sp-cli-overview-rental-image">
+                                <img src="assets/images/rental/football.webp" alt="Professional Football">
+                            </div>
+                            <div class="sp-cli-overview-rental-content">
+                                <div class="sp-cli-overview-rental-top">
+                                    <div>
+                                        <span class="sp-cli-overview-rental-category">Football</span>
+                                        <h3>Professional Match Football</h3>
+                                    </div>
+                                    <span class="sp-cli-overview-rental-status active">Active</span>
+                                </div>
+                                <div class="sp-cli-overview-rental-details">
+                                    <span><i class="bi bi-calendar3"></i> Aug 18 - Aug 22</span>
+                                    <span><i class="bi bi-clock"></i> 2 Days Left</span>
+                                </div>
+                                <div class="sp-cli-overview-rental-progress">
+                                    <div class="sp-cli-overview-rental-progress-info">
+                                        <span>Rental Progress</span>
+                                        <strong>60%</strong>
+                                    </div>
+                                    <div class="sp-cli-overview-rental-progress-bar">
+                                        <span style="width:60%;"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="client-rental.html" class="sp-cli-overview-rental-arrow" aria-label="View Rental">
+                                <i class="bi bi-arrow-up-right"></i>
+                            </a>
+                        </div>
+                        <!--- Rental Item --->
+                        <div class="sp-cli-overview-rental-item">
+                            <div class="sp-cli-overview-rental-image">
+                                <img src="assets/images/rental/badminton.webp" alt="Badminton Racket">
+                            </div>
+                            <div class="sp-cli-overview-rental-content">
+                                <div class="sp-cli-overview-rental-top">
+                                    <div>
+                                        <span class="sp-cli-overview-rental-category">Badminton</span>
+                                        <h3>Yonex Professional Racket</h3>
+                                    </div>
+                                    <span class="sp-cli-overview-rental-status active">Active</span>
+                                </div>
+                                <div class="sp-cli-overview-rental-details">
+                                    <span><i class="bi bi-calendar3"></i> Aug 19 - Aug 25</span>
+                                    <span><i class="bi bi-clock"></i> 4 Days Left</span>
+                                </div>
+                                <div class="sp-cli-overview-rental-progress">
+                                    <div class="sp-cli-overview-rental-progress-info">
+                                        <span>Rental Progress</span>
+                                        <strong>35%</strong>
+                                    </div>
+                                    <div class="sp-cli-overview-rental-progress-bar">
+                                        <span style="width:35%;"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="client-rental.html" class="sp-cli-overview-rental-arrow" aria-label="View Rental">
+                                <i class="bi bi-arrow-up-right"></i>
+                            </a>
+                        </div>
+
+                    </div>
+                    <!--- Quick Actions --->
+                    <div class="sp-cli-overview-card sp-cli-overview-actions-card">
+                        <div class="sp-cli-overview-card-heading">
+                            <div>
+                                <span>QUICK ACCESS</span>
+                                <h2>What Do You Need?</h2>
+                            </div>
+                        </div>
+                        <div class="sp-cli-overview-actions-list">
+                            <a href="client-rental.html" class="sp-cli-overview-action-item">
+                                <div class="sp-cli-overview-action-icon">
+                                    <i class="bi bi-search"></i>
+                                </div>
+                                <div class="sp-cli-overview-action-content">
+                                    <strong>Browse Equipment</strong>
+                                    <span>Find gear for your next game</span>
+                                </div>
+                                <i class="bi bi-arrow-up-right"></i>
+                            </a>
+                            <a href="client-cart.html" class="sp-cli-overview-action-item">
+                                <div class="sp-cli-overview-action-icon">
+                                    <i class="bi bi-bag"></i>
+                                </div>
+                                <div class="sp-cli-overview-action-content">
+                                    <strong>View My Cart</strong>
+                                    <span>Review your selected equipment</span>
+                                </div>
+                                <i class="bi bi-arrow-up-right"></i>
+                            </a>
+                            <a href="client-profile.html" class="sp-cli-overview-action-item">
+                                <div class="sp-cli-overview-action-icon">
+                                    <i class="bi bi-person"></i>
+                                </div>
+                                <div class="sp-cli-overview-action-content">
+                                    <strong>Manage Profile</strong>
+                                    <span>Update your account information</span>
+                                </div>
+                                <i class="bi bi-arrow-up-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!--- Rental Progress --->
+                    <div class="sp-cli-overview-card sp-cli-overview-progress-card">
+                        <div class="sp-cli-overview-card-heading">
+                            <div>
+                                <span>RENTAL JOURNEY</span>
+                                <h2>How It Works</h2>
+                            </div>
+                        </div>
+                        <div class="sp-cli-overview-progress-list">
+                            <div class="sp-cli-overview-progress-item active">
+                                <div class="sp-cli-overview-progress-number">
+                                    <span>01</span>
+                                    <i class="bi bi-check-lg"></i>
+                                </div>
+                                <div>
+                                    <strong>Choose Equipment</strong>
+                                    <p>Browse and select the sports gear you need.</p>
+                                </div>
+                            </div>
+                            <div class="sp-cli-overview-progress-item">
+                                <div class="sp-cli-overview-progress-number">
+                                    <span>02</span>
+                                </div>
+                                <div>
+                                    <strong>Add To Cart</strong>
+                                    <p>Select your rental period and review your gear.</p>
+                                </div>
+                            </div>
+                            <div class="sp-cli-overview-progress-item">
+                                <div class="sp-cli-overview-progress-number">
+                                    <span>03</span>
+                                </div>
+                                <div>
+                                    <strong>Play Your Game</strong>
+                                    <p>Pick up your equipment and enjoy the game.</p>
+                                </div>
+                            </div>
+                            <div class="sp-cli-overview-progress-item">
+                                <div class="sp-cli-overview-progress-number">
+                                    <span>04</span>
+                                </div>
+                                <div>
+                                    <strong>Return With Ease</strong>
+                                    <p>Return the equipment when your rental ends.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--- Sports Tip --->
+                    <div class="sp-cli-overview-card sp-cli-overview-tip-card">
+                        <div class="sp-cli-overview-tip-icon">
+                            <i class="bi bi-lightbulb"></i>
+                        </div>
+                        <span>SPORTRENT TIP</span>
+                        <h2>Plan Your Next Game</h2>
+                        <p>Reserve your equipment early to make sure the gear you need is ready when game day arrives.
+                        </p>
+                        <a href="client-rental.html">
+                            Browse Equipment
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+
+        </div>
+    </div>
+
+    <!--- Js Files --->
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+    <!-- Page JS -->
+    <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/client-dashboard.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,433 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sports Equipment | Dashboard </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Main favicon -->
+    <link rel="icon" href="favicon.ico" />
+    <!-- webp favicons -->
+    <link rel="icon" type="image/webp" sizes="16x16" href="assets/images/favicon-16x16.png" />
+    <link rel="icon" type="image/webp" sizes="32x32" href="assets/images/favicon-32x32.png" />
+    <!-- Apple -->
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
+    <!-- Android -->
+    <link rel="icon" type="image/webp" sizes="192x192" href="assets/images/android-chrome-192x192.png" />
+    <link rel="icon" type="image/webp" sizes="512x512" href="assets/images/android-chrome-512x512.png" />
+    <!-- Manifest -->
+    <link rel="manifest" href="assets/images/site.webmanifest" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!--- Bootstrap Icon --->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="assets/css/global.css" />
+    <link rel="stylesheet" href="assets/css/dashboard.css" />
+</head>
+
+<body>
+
+    <!--- Dashboard --->
+    <div class="sp-dash-layout">
+        <!--- Sidebar Overlay --->
+        <div class="sp-dash-overlay"></div>
+        <!--- Sidebar --->
+        <aside class="sp-dash-sidebar">
+            <!--- Sidebar Header --->
+            <div class="sp-dash-sidebar-header">
+                <a href="index.html" class="sp-dash-logo">
+                    <span class="sp-dash-logo-mark">
+                        <i class="bi bi-trophy-fill"></i>
+                    </span>
+                    <span class="sp-dash-logo-text">SPORT<span>RENT</span></span>
+                </a>
+                <button type="button" class="sp-dash-sidebar-close" aria-label="Close sidebar">
+                    <i class="bi bi-x-lg"></i>
+                </button>
+            </div>
+            <!--- Mobile User Email --->
+            <div class="sp-dash-sidebar-user">
+                <div class="sp-dash-sidebar-user-icon">
+                    <i class="bi bi-person"></i>
+                </div>
+                <div class="sp-dash-sidebar-user-content">
+                    <span>LOGGED IN AS</span>
+                    <strong class="sp-dash-sidebar-email">user@email.com</strong>
+                </div>
+            </div>
+            <!--- Sidebar Navigation --->
+            <nav class="sp-dash-sidebar-nav">
+                <a href="admin-dashboard.html" class="sp-dash-nav-link">
+                    <span class="sp-dash-nav-icon">
+                        <i class="bi bi-grid-1x2"></i>
+                    </span>
+                    <span>Dashboard</span>
+                </a>
+                <a href="admin-rental.html" class="sp-dash-nav-link">
+                    <span class="sp-dash-nav-icon">
+                        <i class="bi bi-box-seam"></i>
+                    </span>
+                    <span>Add Products</span>
+                </a>
+                <a href="admin-users.html" class="sp-dash-nav-link">
+                    <span class="sp-dash-nav-icon">
+                        <i class="bi bi-people"></i>
+                    </span>
+                    <span>Users</span>
+                </a>
+                <a href="admin-profile.html" class="sp-dash-nav-link">
+                    <span class="sp-dash-nav-icon">
+                        <i class="bi bi-person-circle"></i>
+                    </span>
+                    <span>Profile</span>
+                </a>
+                <button type="button" class="sp-dash-nav-link sp-dash-logout">
+                    <span class="sp-dash-nav-icon">
+                        <i class="bi bi-box-arrow-right"></i>
+                    </span>
+                    <span>Logout</span>
+                </button>
+            </nav>
+            <!--- Sidebar Bottom --->
+            <div class="sp-dash-sidebar-bottom">
+                <span class="sp-dash-sidebar-status"></span>
+                <span>SportRent Platform</span>
+            </div>
+        </aside>
+        <!--- Main Area --->
+        <div class="sp-dash-main">
+            <!--- Topbar --->
+            <header class="sp-dash-topbar">
+                <div class="sp-dash-topbar-left">
+                    <button type="button" class="sp-dash-menu-toggle" aria-label="Open menu" aria-expanded="false">
+                        <i class="bi bi-three-dots"></i>
+                    </button>
+                    <div class="sp-dash-page-title">
+                
+                        <h1>Admin Dashboard</h1>
+                    </div>
+                </div>
+                <div class="sp-dash-topbar-right">
+                    <div class="sp-dash-topbar-user">
+                        <div class="sp-dash-topbar-user-content">
+                            <span>WELCOME BACK</span>
+                            <strong class="sp-dash-topbar-email">user@email.com</strong>
+                        </div>
+                        <div class="sp-dash-profile-image" title="Profile">
+                            <span class="sp-dash-profile-initials">SR</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+             <!--- Dashboard Content --->
+            <main class="sp-dash-content">
+                <!--- Admin Overview --->
+                <section class="sp-adm-dashboard-overview">
+                    <!--- Welcome Section --->
+                    <div class="sp-adm-dashboard-welcome">
+                        <div class="sp-adm-dashboard-welcome-content">
+                            <span class="sp-adm-dashboard-welcome-label">
+                                <i class="bi bi-lightning-charge-fill"></i>
+                                ADMIN OVERVIEW
+                            </span>
+                            <h2>Welcome back, <span class="sp-dash-user-name">Admin</span>.</h2>
+                            <p>Here is what is happening across your SportRent platform today.</p>
+                        </div>
+                        <div class="sp-adm-dashboard-welcome-action">
+                            <a href="admin-rental.html">
+                                <i class="bi bi-plus-lg"></i>
+                                <span>Add New Product</span>
+                            </a>
+                        </div>
+                        <div class="sp-adm-dashboard-welcome-decoration sp-adm-dashboard-welcome-decoration-one"></div>
+                        <div class="sp-adm-dashboard-welcome-decoration sp-adm-dashboard-welcome-decoration-two"></div>
+                    </div>
+                    <!--- Statistics Grid --->
+                    <div class="sp-adm-dashboard-stats-grid">
+                        <!--- Total Products --->
+                        <div class="sp-adm-dashboard-stat-card">
+                            <div class="sp-adm-dashboard-stat-top">
+                                <div class="sp-adm-dashboard-stat-icon">
+                                    <i class="bi bi-box-seam"></i>
+                                </div>
+                                <span class="sp-adm-dashboard-stat-badge positive">
+                                    <i class="bi bi-arrow-up-right"></i>
+                                    12%
+                                </span>
+                            </div>
+                            <div class="sp-adm-dashboard-stat-content">
+                                <span>Total Products</span>
+                                <strong>248</strong>
+                                <p>Available equipment</p>
+                            </div>
+                        </div>
+                        <!--- Active Rentals --->
+                        <div class="sp-adm-dashboard-stat-card">
+                            <div class="sp-adm-dashboard-stat-top">
+                                <div class="sp-adm-dashboard-stat-icon">
+                                    <i class="bi bi-arrow-repeat"></i>
+                                </div>
+                                <span class="sp-adm-dashboard-stat-badge positive">
+                                    <i class="bi bi-arrow-up-right"></i>
+                                    8%
+                                </span>
+                            </div>
+                            <div class="sp-adm-dashboard-stat-content">
+                                <span>Active Rentals</span>
+                                <strong>86</strong>
+                                <p>Currently rented</p>
+                            </div>
+                        </div>
+                        <!--- Total Users --->
+                        <div class="sp-adm-dashboard-stat-card">
+                            <div class="sp-adm-dashboard-stat-top">
+                                <div class="sp-adm-dashboard-stat-icon">
+                                    <i class="bi bi-people"></i>
+                                </div>
+                                <span class="sp-adm-dashboard-stat-badge positive">
+                                    <i class="bi bi-arrow-up-right"></i>
+                                    18%
+                                </span>
+                            </div>
+                            <div class="sp-adm-dashboard-stat-content">
+                                <span>Total Users</span>
+                                <strong>1,284</strong>
+                                <p>Registered members</p>
+                            </div>
+                        </div>
+                        <!--- Total Revenue --->
+                        <div class="sp-adm-dashboard-stat-card">
+                            <div class="sp-adm-dashboard-stat-top">
+                                <div class="sp-adm-dashboard-stat-icon">
+                                    <i class="bi bi-wallet2"></i>
+                                </div>
+                                <span class="sp-adm-dashboard-stat-badge positive">
+                                    <i class="bi bi-arrow-up-right"></i>
+                                    24%
+                                </span>
+                            </div>
+                            <div class="sp-adm-dashboard-stat-content">
+                                <span>Total Revenue</span>
+                                <strong>₹84.6K</strong>
+                                <p>This month's earnings</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--- Dashboard Main Grid --->
+                    <div class="sp-adm-dashboard-main-grid">
+                        <!--- Recent Rentals --->
+                        <div class="sp-adm-dashboard-panel sp-adm-dashboard-rentals">
+                            <div class="sp-adm-dashboard-panel-header">
+                                <div>
+                                    <span>LIVE ACTIVITY</span>
+                                    <h3>Recent Rentals</h3>
+                                </div>
+                                <a href="admin-rental.html" class="sp-adm-dashboard-panel-link">
+                                    View All
+                                    <i class="bi bi-arrow-up-right"></i>
+                                </a>
+                            </div>
+                            <div class="sp-adm-dashboard-rental-list">
+                                <div class="sp-adm-dashboard-rental-item">
+                                    <div class="sp-adm-dashboard-rental-user">
+                                        <div class="sp-adm-dashboard-rental-avatar">RK</div>
+                                        <div>
+                                            <strong>Rahul Kumar</strong>
+                                            <span>Football Kit</span>
+                                        </div>
+                                    </div>
+                                    <div class="sp-adm-dashboard-rental-status active">Active</div>
+                                    <div class="sp-adm-dashboard-rental-price">₹850</div>
+                                </div>
+                                <div class="sp-adm-dashboard-rental-item">
+                                    <div class="sp-adm-dashboard-rental-user">
+                                        <div class="sp-adm-dashboard-rental-avatar">AS</div>
+                                        <div>
+                                            <strong>Arjun Singh</strong>
+                                            <span>Cricket Equipment</span>
+                                        </div>
+                                    </div>
+                                    <div class="sp-adm-dashboard-rental-status pending">Pending</div>
+                                    <div class="sp-adm-dashboard-rental-price">₹1,200</div>
+                                </div>
+                                <div class="sp-adm-dashboard-rental-item">
+                                    <div class="sp-adm-dashboard-rental-user">
+                                        <div class="sp-adm-dashboard-rental-avatar">VK</div>
+                                        <div>
+                                            <strong>Vikram Kumar</strong>
+                                            <span>Tennis Racket</span>
+                                        </div>
+                                    </div>
+                                    <div class="sp-adm-dashboard-rental-status completed">Completed</div>
+                                    <div class="sp-adm-dashboard-rental-price">₹650</div>
+                                </div>
+                                <div class="sp-adm-dashboard-rental-item">
+                                    <div class="sp-adm-dashboard-rental-user">
+                                        <div class="sp-adm-dashboard-rental-avatar">SK</div>
+                                        <div>
+                                            <strong>Sanjay Kumar</strong>
+                                            <span>Badminton Set</span>
+                                        </div>
+                                    </div>
+                                    <div class="sp-adm-dashboard-rental-status active">Active</div>
+                                    <div class="sp-adm-dashboard-rental-price">₹450</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--- Quick Actions --->
+                        <div class="sp-adm-dashboard-panel sp-adm-dashboard-actions">
+                            <div class="sp-adm-dashboard-panel-header">
+                                <div>
+                                    <span>MANAGEMENT</span>
+                                    <h3>Quick Actions</h3>
+                                </div>
+                            </div>
+                            <div class="sp-adm-dashboard-action-list">
+                                <a href="admin-rental.html" class="sp-adm-dashboard-action-card">
+                                    <div class="sp-adm-dashboard-action-icon">
+                                        <i class="bi bi-plus-circle"></i>
+                                    </div>
+                                    <div>
+                                        <strong>Add Equipment</strong>
+                                        <span>Create a new rental product</span>
+                                    </div>
+                                    <i class="bi bi-arrow-up-right sp-adm-dashboard-action-arrow"></i>
+                                </a>
+                                <a href="admin-users.html" class="sp-adm-dashboard-action-card">
+                                    <div class="sp-adm-dashboard-action-icon">
+                                        <i class="bi bi-person-plus"></i>
+                                    </div>
+                                    <div>
+                                        <strong>Manage Users</strong>
+                                        <span>View registered members</span>
+                                    </div>
+                                    <i class="bi bi-arrow-up-right sp-adm-dashboard-action-arrow"></i>
+                                </a>
+                                <a href="admin-profile.html" class="sp-adm-dashboard-action-card">
+                                    <div class="sp-adm-dashboard-action-icon">
+                                        <i class="bi bi-gear"></i>
+                                    </div>
+                                    <div>
+                                        <strong>Account Settings</strong>
+                                        <span>Manage your profile</span>
+                                    </div>
+                                    <i class="bi bi-arrow-up-right sp-adm-dashboard-action-arrow"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--- Bottom Grid --->
+                    <div class="sp-adm-dashboard-bottom-grid">
+                        <!--- Popular Equipment --->
+                        <div class="sp-adm-dashboard-panel sp-adm-dashboard-popular">
+                            <div class="sp-adm-dashboard-panel-header">
+                                <div>
+                                    <span>TOP PERFORMANCE</span>
+                                    <h3>Popular Equipment</h3>
+                                </div>
+                                <a href="admin-rental.html" class="sp-adm-dashboard-panel-link">
+                                    View Products
+                                    <i class="bi bi-arrow-up-right"></i>
+                                </a>
+                            </div>
+                            <div class="sp-adm-dashboard-popular-list">
+                                <div class="sp-adm-dashboard-popular-item">
+                                    <div class="sp-adm-dashboard-popular-rank">01</div>
+                                    <div class="sp-adm-dashboard-popular-icon">
+                                        <i class="bi bi-dribbble"></i>
+                                    </div>
+                                    <div class="sp-adm-dashboard-popular-content">
+                                        <strong>Professional Football</strong>
+                                        <span>42 active rentals</span>
+                                    </div>
+                                    <div class="sp-adm-dashboard-popular-progress">
+                                        <span style="width:92%;"></span>
+                                    </div>
+                                </div>
+                                <div class="sp-adm-dashboard-popular-item">
+                                    <div class="sp-adm-dashboard-popular-rank">02</div>
+                                    <div class="sp-adm-dashboard-popular-icon">
+                                        <i class="bi bi-trophy"></i>
+                                    </div>
+                                    <div class="sp-adm-dashboard-popular-content">
+                                        <strong>Cricket Kit</strong>
+                                        <span>36 active rentals</span>
+                                    </div>
+                                    <div class="sp-adm-dashboard-popular-progress">
+                                        <span style="width:78%;"></span>
+                                    </div>
+                                </div>
+                                <div class="sp-adm-dashboard-popular-item">
+                                    <div class="sp-adm-dashboard-popular-rank">03</div>
+                                    <div class="sp-adm-dashboard-popular-icon">
+                                        <i class="bi bi-activity"></i>
+                                    </div>
+                                    <div class="sp-adm-dashboard-popular-content">
+                                        <strong>Tennis Racket</strong>
+                                        <span>28 active rentals</span>
+                                    </div>
+                                    <div class="sp-adm-dashboard-popular-progress">
+                                        <span style="width:62%;"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--- Platform Status --->
+                        <div class="sp-adm-dashboard-panel sp-adm-dashboard-status">
+                            <div class="sp-adm-dashboard-panel-header">
+                                <div>
+                                    <span>SYSTEM STATUS</span>
+                                    <h3>Platform Health</h3>
+                                </div>
+                                <div class="sp-adm-dashboard-live-status">
+                                    <span></span>
+                                    Live
+                                </div>
+                            </div>
+                            <div class="sp-adm-dashboard-status-list">
+                                <div class="sp-adm-dashboard-status-item">
+                                    <div>
+                                        <i class="bi bi-check-circle-fill"></i>
+                                        <span>Rental System</span>
+                                    </div>
+                                    <strong>Operational</strong>
+                                </div>
+                                <div class="sp-adm-dashboard-status-item">
+                                    <div>
+                                        <i class="bi bi-check-circle-fill"></i>
+                                        <span>User Management</span>
+                                    </div>
+                                    <strong>Operational</strong>
+                                </div>
+                                <div class="sp-adm-dashboard-status-item">
+                                    <div>
+                                        <i class="bi bi-check-circle-fill"></i>
+                                        <span>Payment System</span>
+                                    </div>
+                                    <strong>Operational</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <!--- Js Files --->
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+    <!-- Page JS -->
+    <script src="assets/js/dashboard.js"></script>
+</body>
+
+</html>
