@@ -90,8 +90,7 @@
 .sp-nav-menu {
     display: flex;
     align-items: center;
-    margin-left: auto;
-    margin-right: 34px;
+  
 }
 
 .sp-nav-menu-list {
